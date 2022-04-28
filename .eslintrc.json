@@ -34,7 +34,8 @@
             "ignorePackages",
             { "js": "never", "jsx": "never", "ts": "never", "tsx": "never" }
         ],
-        "react/no-unescaped-entities": "off"
+        "react/no-unescaped-entities": "off",
+        "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }]
     },
     "settings": {
         "import/resolver": {
