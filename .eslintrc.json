@@ -11,6 +11,9 @@
         "plugin:import/typescript",
         "airbnb"
     ],
+    "globals": {
+        "React": true
+    },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
@@ -35,9 +38,27 @@
             { "js": "never", "jsx": "never", "ts": "never", "tsx": "never" }
         ],
         "react/no-unescaped-entities": "off",
-        "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }]
+        "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }],
+        "@typescript-eslint/no-unused-vars": [
+            2,
+            {
+                "args": "none"
+            }
+        ],
+        "react/require-default-props": "off",
+        "jsx-a11y/anchor-is-valid": [
+            "error",
+            {
+                "components": ["Link"],
+                "specialLink": ["hrefLeft", "hrefRight"],
+                "aspects": ["invalidHref", "preferButton"]
+            }
+        ]
     },
     "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
         "import/resolver": {
             "typescript": {
                 "alwaysTryTypes": true,
