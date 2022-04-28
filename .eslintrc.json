@@ -6,6 +6,9 @@
     },
     "extends": [
         "plugin:react/recommended",
+        "plugin:security/recommended",
+        "plugin:prettier/recommended",
+        "plugin:import/typescript",
         "airbnb"
     ],
     "parser": "@typescript-eslint/parser",
@@ -16,10 +19,14 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": [
-        "react",
-        "@typescript-eslint"
-    ],
+    "plugins": ["react", "@typescript-eslint", "security", "prettier", "import"],
     "rules": {
+        "quotes": ["error", "double"],
+        "indent": ["error", 4],
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "react/jsx-one-expression-per-line": "off"
     }
 }
