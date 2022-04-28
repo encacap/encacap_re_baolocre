@@ -27,6 +27,20 @@
         "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
         "react/jsx-indent": ["error", 4],
         "react/jsx-indent-props": ["error", 4],
-        "react/jsx-one-expression-per-line": "off"
+        "react/jsx-one-expression-per-line": "off",
+        "react/jsx-props-no-spreading": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            { "js": "never", "jsx": "never", "ts": "never", "tsx": "never" }
+        ]
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true,
+                "project": "./src/"
+            }
+        }
     }
 }
