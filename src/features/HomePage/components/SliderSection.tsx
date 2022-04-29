@@ -4,7 +4,7 @@ import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../styles/slider.module.scss";
 
-const Slider = () => (
+const SliderSection = () => (
     <Swiper
         slidesPerView={1.5}
         autoplay={{
@@ -32,4 +32,4 @@ const Slider = () => (
     </Swiper>
 );
 
-export default Slider;
+export default SliderSection;
