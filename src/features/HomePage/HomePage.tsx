@@ -1,10 +1,13 @@
 import Layout from "../../common/Layout/Layout";
-import Slider from "./components/Slider";
+import CategorySection from "./components/CategorySection";
+import SearchSection from "./components/SearchSection";
+import SliderSection from "./components/SliderSection";
 
 const HomePage = () => (
     <Layout title="Trang chủ">
-        <Slider />
-        <div className="container">Hello World!</div>
+        <SliderSection />
+        <SearchSection />
+        <CategorySection />
     </Layout>
 );
 
