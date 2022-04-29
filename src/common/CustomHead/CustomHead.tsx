@@ -1,19 +1,22 @@
 import Head from "next/head";
+import { useMemo } from "react";
 
 interface CustomHeadProps {
     title: string;
 }
 
-function CustomHead({ title }: CustomHeadProps) {
+const CustomHead = ({ title }: CustomHeadProps) => {
+    const websiteName = useMemo(() => process.env.NEXT_PUBLIC_WEBSITE_NAME, []);
+
     return (
         <Head>
             {title && (
                 <title>
-                    {title} - {process.env.NEXT_PUBLIC_WEBSITE_NAME}
+                    {title} - {websiteName}
                 </title>
             )}
         </Head>
     );
-}
+};
 
 export default CustomHead;

@@ -1,11 +1,5 @@
-import CustomHead from "../components/CustomHead";
-import styles from "../styles/Home.module.scss";
+import HomePage from "../features/HomePage/HomePage";
 
-export default function Home() {
-    return (
-        <>
-            <CustomHead title="Trang chủ" />
-            <div className={styles.container} />
-        </>
-    );
-}
+const Home = () => <HomePage />;
+
+export default Home;
