@@ -10,11 +10,7 @@ const CustomHead = ({ title }: CustomHeadProps) => {
 
     return (
         <Head>
-            {title && (
-                <title>
-                    {title} - {websiteName}
-                </title>
-            )}
+            <title>{`${title} - ${websiteName}`}</title>
         </Head>
     );
 };

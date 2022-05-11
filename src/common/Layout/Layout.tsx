@@ -1,4 +1,5 @@
 import CustomHead from "../CustomHead/CustomHead";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 
 interface LayoutProps {
@@ -11,6 +12,7 @@ const Layout = ({ children, title = "Trang chủ" }: LayoutProps) => (
         <CustomHead title={title} />
         <Header />
         {children}
+        <Footer />
     </>
 );
 

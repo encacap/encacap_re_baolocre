@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-interface SocialItemProps {
+export interface IconProps {
     children?: React.ReactNode;
     href: string;
-    className: string;
+    className?: string;
 }
 
-const SocialItem = ({ children, href, className }: SocialItemProps) => (
+const IconWrapper = ({ children, href, className }: IconProps) => (
     <Link href={href}>
         <a
             className={`flex items-center justify-center w-11 h-11 mr-2 rounded-full border-2 duration-150 bg-gray-100 text-xl text-zinc-500 ${className}`}
@@ -16,4 +16,4 @@ const SocialItem = ({ children, href, className }: SocialItemProps) => (
     </Link>
 );
 
-export default SocialItem;
+export default IconWrapper;

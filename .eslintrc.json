@@ -53,7 +53,9 @@
                 "specialLink": ["hrefLeft", "hrefRight"],
                 "aspects": ["invalidHref", "preferButton"]
             }
-        ]
+        ],
+        "camelcase": "off",
+        "arrow-body-style": "off"
     },
     "settings": {
         "import/parsers": {

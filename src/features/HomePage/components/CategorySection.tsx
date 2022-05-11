@@ -8,7 +8,7 @@ const CategorySection = () => (
                     Mọi thứ bạn cần
                 </div>
                 <div className="pt-3 text-2xl md:pb-3 md:text-4xl">Các danh mục</div>
-                <div className="hidden w-20 h-1 mx-auto mt-4 rounded-t-lg md:block bg-encacap-main" />
+                <div className="hidden w-20 h-1 mx-auto mt-4 md:block bg-encacap-main" />
             </div>
             <div className="grid w-full grid-cols-3 gap-4 px-4 lg:gap-10 md:mt-10 md:pb-10 lg:px-0">
                 <CategoryItem

@@ -6,7 +6,7 @@ interface EstatesHorizontalProps {
     title: string;
 }
 
-const EstatesHorizontal = ({ title }: EstatesHorizontalProps) => (
+const EstateHorizontal = ({ title }: EstatesHorizontalProps) => (
     <div className="overflow-hidden duration-200 bg-white border-b-2 border-gray-100 group md:shadow-md md:shadow-gray-200 md:rounded-lg md:border-b-0 md:hover:shadow-lg">
         <a
             href="<%= estate.url %>"
@@ -69,4 +69,4 @@ const EstatesHorizontal = ({ title }: EstatesHorizontalProps) => (
     </div>
 );
 
-export default EstatesHorizontal;
+export default EstateHorizontal;

@@ -1,5 +1,5 @@
 import { BiChevronRight } from "react-icons/bi";
-import EstatesHorizontal from "../../../common/EstatesHorizontal/EstatesHorizontal";
+import EstateHorizontal from "../../../common/Estate/EstateHorizontal";
 
 const EstateListSection = () => (
     <section className="py-10 border-t-2 border-b-2 border-gray-100 md:border-t-0 md:border-b-0 md:px-4 lg:px-10 xl:px-48 md:py-20 md:bg-gray-100">
@@ -8,17 +8,17 @@ const EstateListSection = () => (
                 Dành cho bạn
             </div>
             <div className="py-3 text-2xl text-center md:text-4xl">Bất động sản đang bán</div>
-            <div className="w-20 h-1 mx-auto mt-4 rounded-t-lg bg-encacap-main" />
+            <div className="w-20 h-1 mx-auto mt-4 bg-encacap-main" />
         </div>
         <div className="grid gap-4 px-4 mt-10 md:grid-cols-3 lg:grid-cols-4 md:px-0">
-            <EstatesHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
-            <EstatesHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
-            <EstatesHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
-            <EstatesHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
-            <EstatesHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
-            <EstatesHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
-            <EstatesHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
-            <EstatesHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
+            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
+            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
+            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
+            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
+            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
+            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
+            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
+            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
         </div>
         <div className="flex justify-center mt-10">
             <a
