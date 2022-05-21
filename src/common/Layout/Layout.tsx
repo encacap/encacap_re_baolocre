@@ -5,14 +5,15 @@ import Header from "./components/Header/Header";
 interface LayoutProps {
     children: React.ReactNode;
     title?: string;
+    footerColor?: "light" | "dark";
 }
 
-const Layout = ({ children, title = "Trang chủ" }: LayoutProps) => (
+const Layout = ({ children, title = "Trang chủ", footerColor = "light" }: LayoutProps) => (
     <>
         <CustomHead title={title} />
         <Header />
         {children}
-        <Footer />
+        <Footer color={footerColor} />
     </>
 );
 

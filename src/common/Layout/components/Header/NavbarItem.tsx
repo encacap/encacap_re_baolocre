@@ -6,7 +6,7 @@ interface SidebarItemProps {
     children?: React.ReactNode;
 }
 
-const SidebarItem = ({ href, isActive = false, children }: SidebarItemProps) => (
+const NavbarItem = ({ href, isActive = false, children }: SidebarItemProps) => (
     <Link href={href}>
         <a className={`relative group inline-block py-2 mr-6 ${isActive && " text-encacap-main"}`}>
             {children}
@@ -19,4 +19,4 @@ const SidebarItem = ({ href, isActive = false, children }: SidebarItemProps) => 
     </Link>
 );
 
-export default SidebarItem;
+export default NavbarItem;

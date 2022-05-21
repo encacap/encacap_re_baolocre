@@ -11,7 +11,7 @@ const NewsList = () => {
                     updated_at: new Date(),
                 }}
             />
-            <div className="border-gray-100 divide-y-2 divide-gray-100 md:pl-6 md:pr-3 md:-my-4">
+            <div className="border-b-2 border-gray-100 divide-y-2 divide-gray-100 md:pl-6 md:pr-3 md:-my-4 md:border-b-0">
                 <NewsItemNormal />
                 <NewsItemNormal />
                 <NewsItemNormal />

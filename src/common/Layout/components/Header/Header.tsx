@@ -1,4 +1,4 @@
-import Sidebar from "./Sidebar";
+import Navbar from "./Navbar";
 import SocialItems from "./SocialItems";
 
 const Header = () => (
@@ -16,7 +16,7 @@ const Header = () => (
                         <div className="text-2xl font-bold text-encacap-main">Bảo Lộc</div>
                     </div>
                 </a>
-                <Sidebar />
+                <Navbar />
             </div>
             <SocialItems />
         </div>

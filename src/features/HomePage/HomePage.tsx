@@ -13,7 +13,7 @@ interface HomeProps {
 }
 
 const HomePage = ({ head }: HomeProps) => (
-    <Layout title={head.title}>
+    <Layout title={head.title} footerColor="dark">
         <SliderSection />
         <SearchSection />
         <CategorySection />

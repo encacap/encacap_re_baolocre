@@ -1,9 +1,15 @@
+import dayjs from "dayjs";
+import { twMerge } from "tailwind-merge";
 import FacebookIcon from "../../../Icon/FacebookIcon";
 import YoutubeIcon from "../../../Icon/YoutubeIcon";
 
-const Footer = () => {
+interface FooterProps {
+    color: "light" | "dark";
+}
+
+const Footer = ({ color }: FooterProps) => {
     return (
-        <footer className="px-4 pt-4 bg-gray-100 lg:px-10 lg:pt-10 lg:bg-none">
+        <footer className={twMerge("px-4 pt-4 lg:px-10 lg:pt-10 lg:bg-none", color === "dark" && "bg-gray-100")}>
             <div className="lg:flex">
                 <div className="flex items-center justify-between">
                     <a href="/" className="flex items-center header-logo">
@@ -60,7 +66,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="hidden lg:flex">
-                        <div className="lg:ml-16">
+                        <div className="flex items-center lg:ml-16">
                             <YoutubeIcon href="https://www.facebook.com/encacap" />
                             <FacebookIcon href="https://www.facebook.com/encacap" />
                         </div>
@@ -68,7 +74,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="py-4 mt-4 text-center border-t-2 lg:mt-10">
-                Copyrights © 2021. All rights reserved by
+                Copyrights © {dayjs().format("YYYY")}. All rights reserved by{" "}
                 <a href="https://www.facebook.com/khackhanh.encacap/" className="font-semibold">
                     Encacap
                 </a>
