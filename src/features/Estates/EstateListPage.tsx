@@ -4,6 +4,7 @@ import { ContentWrapper, ContentWrapperAside, ContentWrapperBody } from "../../c
 import PageLayout from "../../common/Layout/PageLayout";
 import { EstateListPageProps } from "../../common/Types/pageProps";
 import EstateList from "./Components/EstateList";
+import EstateSearch from "./Components/EstateSearch";
 
 const EstateListPage = ({ head, categories }: EstateListPageProps) => {
     return (
@@ -31,7 +32,9 @@ const EstateListPage = ({ head, categories }: EstateListPageProps) => {
                     </div>
                     <EstateList />
                 </ContentWrapperBody>
-                <ContentWrapperAside>Aside</ContentWrapperAside>
+                <ContentWrapperAside>
+                    <EstateSearch />
+                </ContentWrapperAside>
             </ContentWrapper>
         </PageLayout>
     );
