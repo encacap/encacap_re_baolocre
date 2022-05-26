@@ -1,4 +1,4 @@
-import EstateVertical from "../../../common/Estate/EstateVertical";
+import EstateVertical from "../../../../common/Estate/EstateVertical";
 
 const EstateList = () => {
     return (

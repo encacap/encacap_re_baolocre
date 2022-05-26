@@ -1,8 +1,8 @@
-import Breadcrumb from "../../common/Breadcrumb/Breadcrumb";
-import Category from "../../common/Category/Category";
-import { ContentWrapper, ContentWrapperAside, ContentWrapperBody } from "../../common/Layout";
-import PageLayout from "../../common/Layout/PageLayout";
-import { EstateListPageProps } from "../../common/Types/pageProps";
+import Breadcrumb from "../../../common/Breadcrumb/Breadcrumb";
+import Category from "../../../common/Category/Category";
+import { ContentWrapper, ContentWrapperAside, ContentWrapperBody } from "../../../common/Layout";
+import PageLayout from "../../../common/Layout/PageLayout";
+import { EstateListPageProps } from "../../../common/Types/pageProps";
 import EstateList from "./Components/EstateList";
 import EstateSearch from "./Components/EstateSearch";
 
