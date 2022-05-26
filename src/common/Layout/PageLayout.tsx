@@ -8,7 +8,7 @@ interface LayoutProps {
     footerColor?: "light" | "dark";
 }
 
-const Layout = ({ children, title = "Trang chủ", footerColor = "light" }: LayoutProps) => (
+const PageLayout = ({ children, title = "Trang chủ", footerColor = "light" }: LayoutProps) => (
     <>
         <CustomHead title={title} />
         <Header />
@@ -17,4 +17,4 @@ const Layout = ({ children, title = "Trang chủ", footerColor = "light" }: Layo
     </>
 );
 
-export default Layout;
+export default PageLayout;
