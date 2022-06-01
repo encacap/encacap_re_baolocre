@@ -57,7 +57,8 @@
             }
         ],
         "camelcase": "off",
-        "arrow-body-style": "off"
+        "arrow-body-style": "off",
+        "operator-linebreak": ["error", "after"]
     },
     "settings": {
         "import/parsers": {
