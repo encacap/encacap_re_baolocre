@@ -6,6 +6,7 @@ import { EstateListPageProps } from "../../../common/Types/pageProps";
 import EstateList from "./Components/EstateList";
 import EstateSearch from "./Components/EstateSearch";
 import FilterByArea from "./Components/FilterByArea";
+import FilterByRegion from "./Components/FilterByRegion";
 
 const EstateListPage = ({ head, categories }: EstateListPageProps) => {
     return (
@@ -36,6 +37,7 @@ const EstateListPage = ({ head, categories }: EstateListPageProps) => {
                 <ContentWrapperAside>
                     <EstateSearch />
                     <FilterByArea />
+                    <FilterByRegion />
                 </ContentWrapperAside>
             </ContentWrapper>
         </PageLayout>

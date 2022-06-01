@@ -49,7 +49,7 @@ const EstateHorizontal = ({
                             special && "hidden md:flex"
                         )}
                     >
-                        <div className="absolute inset-0 blur-lg">
+                        <div className="absolute inset-0 blur-xl">
                             <Image
                                 src={thumbnail || "/images/no-image.png"}
                                 alt={title}
