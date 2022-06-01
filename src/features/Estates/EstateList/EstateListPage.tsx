@@ -25,7 +25,7 @@ const EstateListPage = ({ head, categories }: EstateListPageProps) => {
                         ]}
                     />
                     <div className="py-2 text-2xl font-semibold">Danh sách bất động sản bán</div>
-                    <div className="-mb-1.5 md:mb-8">
+                    <div className="mb-6 md:mb-8">
                         Hiện có 7 bất động sản
                         <span className="mx-1 text-gray-400 md:mx-2">•</span>
                         <span className="text-gray-400">Đang hiển thị trang 1 trên tổng số 1 trang</span>
