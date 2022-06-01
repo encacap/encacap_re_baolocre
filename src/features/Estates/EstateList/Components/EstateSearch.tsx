@@ -1,16 +1,16 @@
 const EstateSearch = () => {
     return (
-        <form className="relative block pb-6" name="estateSearch" action="/bat-dong-san-ban" method="GET">
+        <form className="relative block" name="estateSearch" action="/bat-dong-san-ban" method="GET">
             <input
                 type="text"
                 name="estateSearchQuery"
                 id="query"
-                className="w-full px-5 py-4 rounded-md outline-none ring-2 ring-gray-100 focus:ring-encacap-main"
+                className="w-full px-5 py-4 border-2 border-gray-100 rounded-md outline-none focus:border-encacap-main"
                 placeholder="Nhập mã bất động sản hoặc tiêu đề để tìm kiếm..."
             />
             <button
                 type="submit"
-                className="absolute flex items-center px-4 py-1 text-white duration-200 rounded-md top-3 right-3 bg-encacap-main hover:bg-yellow-600"
+                className="absolute flex items-center px-4 py-1 text-white duration-200 rounded-md top-3.5 right-3 bg-encacap-main hover:bg-yellow-600"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-4 mr-2">
                     <path

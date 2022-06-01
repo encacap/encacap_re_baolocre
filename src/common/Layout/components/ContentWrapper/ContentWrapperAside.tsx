@@ -6,7 +6,7 @@ interface ContentWrapperAsideProps extends React.HTMLAttributes<HTMLElement> {
 
 const ContentWrapperAside = ({ children, className, ...otherProps }: ContentWrapperAsideProps) => {
     return (
-        <aside className={twMerge("hidden lg:block", className)} {...otherProps}>
+        <aside className={twMerge("hidden lg:block space-y-8", className)} {...otherProps}>
             {children}
         </aside>
     );
