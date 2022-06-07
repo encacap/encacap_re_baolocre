@@ -12,11 +12,13 @@ interface REDImageSliderVideoProps {
 const REDImageSliderVideo = ({ videoId, thumbnailSrc, priority }: REDImageSliderVideoProps) => {
     const [videoRef, setVideoRef] = useState<YouTubeEvent["target"]>(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [isShowThumbnail, setIsShowThumbnail] = useState(true);
 
     const handleClickPlayButton = () => {
         if (videoRef) {
             videoRef.playVideo();
             setIsPlaying(!isPlaying);
+            setIsShowThumbnail(false);
         }
     };
 
@@ -39,15 +41,17 @@ const REDImageSliderVideo = ({ videoId, thumbnailSrc, priority }: REDImageSlider
                     tabIndex={0}
                     role="button"
                 >
-                    <div className="absolute inset-0 -z-10">
-                        <Image
-                            src={thumbnailSrc}
-                            alt="Real Estate"
-                            layout="fill"
-                            className="object-cover object-center w-full h-full"
-                            priority={priority}
-                        />
-                    </div>
+                    {isShowThumbnail && (
+                        <div className="absolute inset-0 -z-10">
+                            <Image
+                                src={thumbnailSrc}
+                                alt="Real Estate"
+                                layout="fill"
+                                className="object-cover object-center w-full h-full"
+                                priority={priority}
+                            />
+                        </div>
+                    )}
                     <BsYoutube className="text-4xl lg:text-7xl" />
                 </div>
             )}
