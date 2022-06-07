@@ -20,7 +20,7 @@ const REDImageSlider = () => {
     };
 
     return (
-        <div className="relative -mx-4 md:mx-0">
+        <div className="relative -mx-4 md:-mt-2 lg:mt-8 md:mx-0">
             <REDImageSliderPrevButton />
             <Swiper
                 pagination={pagination}

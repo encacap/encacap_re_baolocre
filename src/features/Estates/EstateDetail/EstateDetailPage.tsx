@@ -37,7 +37,7 @@ const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
                             },
                         ]}
                     />
-                    <div className="py-2 text-2xl font-semibold">ĐẤT NỀN TP BẢO LỘC. HẺM TRẦN KẾ XƯƠNG</div>
+                    <div className="pt-3 pb-2 text-2xl font-semibold">ĐẤT NỀN TP BẢO LỘC. HẺM TRẦN KẾ XƯƠNG</div>
                     <div className="mb-6 md:mb-8">Hiện có 7 bất động sản</div>
                 </ContentWrapperBody>
                 <ContentWrapperAside>
