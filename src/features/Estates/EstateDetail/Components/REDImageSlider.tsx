@@ -7,6 +7,7 @@ import { NavigationOptions, PaginationOptions } from "swiper/types";
 import REDImageSliderImage from "./REDImageSliderImage";
 import REDImageSliderNextButton from "./REDImageSliderNextButton";
 import REDImageSliderPrevButton from "./REDImageSliderPrevButton";
+import REDImageSliderVideo from "./REDImageSliderVideo";
 
 const REDImageSlider = () => {
     const pagination: PaginationOptions = {
@@ -30,9 +31,9 @@ const REDImageSlider = () => {
                 className="relative w-full mb-8 bg-gray-100 md:rounded-lg real-estate-detail-slider aspect-video"
             >
                 <SwiperSlide>
-                    <REDImageSliderImage
-                        src="https://res.cloudinary.com/baolocre-estatesone/image/upload/q_auto,f_auto/v1648441637/baolocre_estate/h4ryl3h8nvvtuwc009mj.jpg"
-                        alt="Real Estate"
+                    <REDImageSliderVideo
+                        videoId="VG0zeok0tr8"
+                        thumbnailSrc="https://res.cloudinary.com/baolocre-estatesone/image/upload/q_auto,f_auto/v1648441637/baolocre_estate/h4ryl3h8nvvtuwc009mj.jpg"
                         priority
                     />
                 </SwiperSlide>
