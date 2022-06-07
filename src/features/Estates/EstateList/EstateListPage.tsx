@@ -1,9 +1,9 @@
 import Breadcrumb from "../../../common/Breadcrumb/Breadcrumb";
-import Category from "../../../common/Category/Category";
 import { ContentWrapper, ContentWrapperAside, ContentWrapperBody } from "../../../common/Layout";
 import PageLayout from "../../../common/Layout/PageLayout";
 import Pagination from "../../../common/Pagination/Pagination";
 import { EstateListPageProps } from "../../../common/Types/pageProps";
+import EstateContentHeader from "../Components/EstateContentHeader";
 import EstateList from "./Components/EstateList";
 import EstateSearch from "./Components/EstateSearch";
 import FilterByArea from "./Components/FilterByArea";
@@ -14,7 +14,7 @@ const EstateListPage = ({ head, categories }: EstateListPageProps) => {
         <PageLayout title={head.title} footerColor="dark">
             <ContentWrapper>
                 <ContentWrapperBody>
-                    <Category categories={categories} />
+                    <EstateContentHeader categories={categories} />
                     <Breadcrumb
                         items={[
                             {

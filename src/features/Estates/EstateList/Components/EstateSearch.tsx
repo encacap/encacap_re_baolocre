@@ -1,6 +1,13 @@
-const EstateSearch = () => {
+import { twMerge } from "tailwind-merge";
+
+const EstateSearch = ({ className }: React.HTMLAttributes<HTMLElement>) => {
     return (
-        <form className="relative block" name="estateSearch" action="/bat-dong-san-ban" method="GET">
+        <form
+            className={twMerge("relative block", className)}
+            name="estateSearch"
+            action="/bat-dong-san-ban"
+            method="GET"
+        >
             <input
                 type="text"
                 name="estateSearchQuery"

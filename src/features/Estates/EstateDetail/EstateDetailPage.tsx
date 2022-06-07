@@ -1,7 +1,7 @@
 import Breadcrumb from "../../../common/Breadcrumb/Breadcrumb";
-import Category from "../../../common/Category/Category";
 import { ContentWrapper, ContentWrapperAside, ContentWrapperBody, PageLayout } from "../../../common/Layout";
 import { EstateDetailPageProps } from "../../../common/Types/pageProps";
+import EstateContentHeader from "../Components/EstateContentHeader";
 import EstateSearch from "../EstateList/Components/EstateSearch";
 import FilterByRegion from "../EstateList/Components/FilterByRegion";
 import REDImageSlider from "./Components/REDImageSlider";
@@ -11,7 +11,7 @@ const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
         <PageLayout title={head.title} footerColor="dark">
             <ContentWrapper>
                 <ContentWrapperBody>
-                    <Category categories={categories} />
+                    <EstateContentHeader categories={categories} />
                     <REDImageSlider />
                     <Breadcrumb
                         items={[
