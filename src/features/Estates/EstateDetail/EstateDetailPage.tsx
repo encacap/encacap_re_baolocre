@@ -5,8 +5,8 @@ import { EstateDetailPageProps } from "../../../common/Types/pageProps";
 import EstateContentHeader from "../Components/EstateContentHeader";
 import EstateSearch from "../EstateList/Components/EstateSearch";
 import FilterByRegion from "../EstateList/Components/FilterByRegion";
+import EstateImageSlider from "./Components/EstateImageSlider";
 import EstateProperties from "./Components/EstateProperties";
-import REDImageSlider from "./Components/REDImageSlider";
 
 const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
     return (
@@ -14,7 +14,7 @@ const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
             <ContentWrapper>
                 <ContentWrapperBody>
                     <EstateContentHeader categories={categories} />
-                    <REDImageSlider />
+                    <EstateImageSlider />
                     <Breadcrumb
                         items={[
                             {

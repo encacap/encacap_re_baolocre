@@ -9,7 +9,7 @@ interface REDImageSliderVideoProps {
     priority?: boolean;
 }
 
-const REDImageSliderVideo = ({ videoId, thumbnailSrc, priority }: REDImageSliderVideoProps) => {
+const EstateImageSliderVideo = ({ videoId, thumbnailSrc, priority }: REDImageSliderVideoProps) => {
     const [videoRef, setVideoRef] = useState<YouTubeEvent["target"]>(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [isShowThumbnail, setIsShowThumbnail] = useState(true);
@@ -67,4 +67,4 @@ const REDImageSliderVideo = ({ videoId, thumbnailSrc, priority }: REDImageSlider
     );
 };
 
-export default REDImageSliderVideo;
+export default EstateImageSliderVideo;

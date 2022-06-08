@@ -4,12 +4,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { NavigationOptions, PaginationOptions } from "swiper/types";
-import REDImageSliderImage from "./REDImageSliderImage";
-import REDImageSliderNextButton from "./REDImageSliderNextButton";
-import REDImageSliderPrevButton from "./REDImageSliderPrevButton";
-import REDImageSliderVideo from "./REDImageSliderVideo";
+import EstateImageSliderImage from "./EstateImageSliderImage";
+import EstateImageSliderNextButton from "./EstateImageSliderNextButton";
+import EstateImageSliderPrevButton from "./EstateImageSliderPrevButton";
+import EstateImageSliderVideo from "./EstateImageSliderVideo";
 
-const REDImageSlider = () => {
+const EstateImageSlider = () => {
     const pagination: PaginationOptions = {
         type: "fraction",
         horizontalClass:
@@ -23,7 +23,7 @@ const REDImageSlider = () => {
 
     return (
         <div className="relative -mx-4 lg:mt-8 md:mx-0">
-            <REDImageSliderPrevButton />
+            <EstateImageSliderPrevButton />
             <Swiper
                 pagination={pagination}
                 navigation={navigation}
@@ -31,22 +31,22 @@ const REDImageSlider = () => {
                 className="relative w-full mb-8 bg-gray-100 md:rounded-lg real-estate-detail-slider aspect-video"
             >
                 <SwiperSlide>
-                    <REDImageSliderVideo
+                    <EstateImageSliderVideo
                         videoId="VG0zeok0tr8"
                         thumbnailSrc="https://res.cloudinary.com/baolocre-estatesone/image/upload/q_auto,f_auto/v1648441637/baolocre_estate/h4ryl3h8nvvtuwc009mj.jpg"
                         priority
                     />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <REDImageSliderImage
+                    <EstateImageSliderImage
                         src="https://res.cloudinary.com/baolocre-estatesone/image/upload/q_auto,f_auto/v1648441637/baolocre_estate/h4ryl3h8nvvtuwc009mj.jpg"
                         alt="Real Estate"
                     />
                 </SwiperSlide>
             </Swiper>
-            <REDImageSliderNextButton />
+            <EstateImageSliderNextButton />
         </div>
     );
 };
 
-export default REDImageSlider;
+export default EstateImageSlider;
