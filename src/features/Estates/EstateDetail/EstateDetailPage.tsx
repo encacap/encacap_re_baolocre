@@ -1,9 +1,11 @@
+import { HiOutlineLocationMarker } from "react-icons/hi";
 import Breadcrumb from "../../../common/Breadcrumb/Breadcrumb";
 import { ContentWrapper, ContentWrapperAside, ContentWrapperBody, PageLayout } from "../../../common/Layout";
 import { EstateDetailPageProps } from "../../../common/Types/pageProps";
 import EstateContentHeader from "../Components/EstateContentHeader";
 import EstateSearch from "../EstateList/Components/EstateSearch";
 import FilterByRegion from "../EstateList/Components/FilterByRegion";
+import EstateProperties from "./Components/EstateProperties";
 import REDImageSlider from "./Components/REDImageSlider";
 
 const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
@@ -37,8 +39,14 @@ const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
                             },
                         ]}
                     />
-                    <div className="pt-3 pb-2 text-2xl font-semibold">ĐẤT NỀN TP BẢO LỘC. HẺM TRẦN KẾ XƯƠNG</div>
-                    <div className="mb-6 md:mb-8">Hiện có 7 bất động sản</div>
+                    <div className="pt-3 pb-2.5 text-2xl font-semibold text-encacap-main">
+                        ĐẤT NỀN TP BẢO LỘC. HẺM TRẦN KẾ XƯƠNG
+                    </div>
+                    <div className="flex items-center font-semibold">
+                        <HiOutlineLocationMarker className="mr-4 text-lg" />
+                        Đường Blaosire, Phường 2, Thành phố Bảo Lộc, Lâm Đồng
+                    </div>
+                    <EstateProperties />
                 </ContentWrapperBody>
                 <ContentWrapperAside>
                     <EstateSearch />
