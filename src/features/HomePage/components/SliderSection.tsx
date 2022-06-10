@@ -15,7 +15,6 @@ const SliderSection = () => (
         spaceBetween={20}
         centeredSlides
         className="w-full aspect-[16/6]"
-        navigation
     >
         <SwiperSlide>
             <Image src="/images/slides/01.jpg" layout="fill" objectFit="cover" quality={100} priority />
