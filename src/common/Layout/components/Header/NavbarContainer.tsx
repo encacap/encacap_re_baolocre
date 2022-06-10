@@ -11,9 +11,12 @@ const NavbarContainer = ({ className, children: sidebarItems }: SidebarContainer
     return (
         <nav className={className}>
             {Children.map(sidebarItems, (child: React.ReactElement) => {
+                const { pathname } = params;
                 const { href } = child.props;
-                const isActive = href === params.pathname;
-                return cloneElement(child, { isActive });
+                if (href === "/") {
+                    return cloneElement(child, { isActive: pathname === href });
+                }
+                return cloneElement(child, { isActive: pathname.includes(href) });
             })}
         </nav>
     );
