@@ -30,6 +30,7 @@ const EstateList = () => {
                 avatar={{
                     type: "video",
                 }}
+                to="/bat-dong-san-ban/dat-nen/quang-ngai/tu-nghia/la-ha/dat-nen-thanh-pho-bao-loc/1"
                 priority
                 special
             />
@@ -57,6 +58,7 @@ const EstateList = () => {
                 thumbnail="https://res.cloudinary.com/baolocre-estatesone/image/upload/c_thumb,g_center,w_400/v1648441637/baolocre_estate/h4ryl3h8nvvtuwc009mj.jpg"
                 pictures={[]}
                 videos={[]}
+                to="/bat-dong-san-ban/dat-nen/quang-ngai/tu-nghia/la-ha/dat-nen-thanh-pho-bao-loc/1"
                 avatar={{
                     type: "video",
                 }}

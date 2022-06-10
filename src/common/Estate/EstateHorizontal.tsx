@@ -9,6 +9,7 @@ import { EstateType } from "../Types/commonTypes";
 interface EstateHorizontalProps extends EstateType {
     priority?: boolean;
     special?: boolean;
+    to: string;
 }
 
 const EstateHorizontal = ({
@@ -21,6 +22,7 @@ const EstateHorizontal = ({
     contact,
     priority = false,
     special = false,
+    to,
 }: EstateHorizontalProps) => {
     return (
         <div className="w-full mb-4 overflow-hidden duration-200 group md:flex md:mt-4 md:mb-0 md:rounded-md hover:text-encacap-main md:hover:shadow-gray-100 md:hover:shadow-lg">
@@ -42,7 +44,7 @@ const EstateHorizontal = ({
                 {title}
             </div>
             <div className="flex w-full">
-                <Link href="/">
+                <Link href={to}>
                     <a
                         className={twMerge(
                             "relative w-28 md:w-64 h-28 md:h-auto rounded-lg overflow-hidden flex items-center bg-gray-100 md:rounded-none",
@@ -76,7 +78,7 @@ const EstateHorizontal = ({
                         special && "pl-0"
                     )}
                 >
-                    <Link href="/">
+                    <Link href={to}>
                         <a className="flex flex-col flex-1">
                             <div className="hidden font-semibold uppercase md:block text-encacap-main">{title}</div>
                             <div className="py-1 font-semibold md:py-2">
