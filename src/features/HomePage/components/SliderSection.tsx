@@ -2,7 +2,6 @@
 import Image from "next/image";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "../styles/slider.module.scss";
 
 const SliderSection = () => (
     <Swiper
