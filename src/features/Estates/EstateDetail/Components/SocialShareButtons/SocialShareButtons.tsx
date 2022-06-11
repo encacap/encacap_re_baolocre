@@ -3,7 +3,7 @@ import ZaloShareButton from "./ZaloShareButton";
 
 const SocialShareButtons = () => {
     return (
-        <div className="grid grid-cols-2 gap-4 mt-6 mb-3 md:gap-10">
+        <div className="grid grid-cols-2 gap-4 mt-6 md:gap-10">
             <ZaloShareButton />
             <FacebookShareButton />
         </div>

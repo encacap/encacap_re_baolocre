@@ -6,7 +6,7 @@ import EstateContentHeader from "../Components/EstateContentHeader";
 import EstateSearch from "../EstateList/Components/EstateSearch";
 import FilterByRegion from "../EstateList/Components/FilterByRegion";
 import EstateDescription from "./Components/EstateDescription";
-import EstateImageSlider from "./Components/EstateImageSlider";
+import EstateImageSlider from "./Components/EstateImageSlider/EstateImageSlider";
 import EstateProperties from "./Components/EstateProperties";
 import SocialShareButtons from "./Components/SocialShareButtons/SocialShareButtons";
 
@@ -49,7 +49,7 @@ const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
                         Đường Blaosire, Phường 2, Thành phố Bảo Lộc, Lâm Đồng
                     </div>
                     <EstateProperties />
-                    <div className="mt-6">
+                    <div className="my-6">
                         <EstateDescription />
                         <SocialShareButtons />
                     </div>
