@@ -39,11 +39,11 @@ const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
                             },
                         ]}
                     />
-                    <div className="pt-3 pb-2.5 text-2xl font-semibold text-encacap-main">
+                    <div className="pt-4 pb-3.5 text-2xl font-semibold text-encacap-main">
                         ĐẤT NỀN TP BẢO LỘC. HẺM TRẦN KẾ XƯƠNG
                     </div>
-                    <div className="flex items-center font-semibold">
-                        <HiOutlineLocationMarker className="mr-4 text-lg" />
+                    <div className="flex font-semibold md:items-center">
+                        <HiOutlineLocationMarker className="flex-shrink-0 mt-1 mr-4 text-lg" />
                         Đường Blaosire, Phường 2, Thành phố Bảo Lộc, Lâm Đồng
                     </div>
                     <EstateProperties />

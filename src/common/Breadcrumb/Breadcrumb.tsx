@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { twMerge } from "tailwind-merge";
 import { BreadcrumbProps } from "../Types/commonProps";
 import { BreadcrumbType } from "../Types/commonTypes";
 import BreadcrumbItem from "./BreadcrumbItem";
@@ -10,7 +11,7 @@ const defaultBreadcrumbItems = [
     },
 ];
 
-const Breadcrumb = ({ items }: BreadcrumbProps) => {
+const Breadcrumb = ({ items, className }: BreadcrumbProps) => {
     const [totalBreadcrumbItems, setTotalBreadcrumbItems] = useState(0);
     const breadcrumbs = useMemo<BreadcrumbType[]>(() => {
         let urlTree = "/";
@@ -28,7 +29,7 @@ const Breadcrumb = ({ items }: BreadcrumbProps) => {
     }, [items]);
 
     return (
-        <div className="flex flex-wrap items-center">
+        <div className={twMerge("flex flex-wrap items-center", className)}>
             {breadcrumbs.map((item, index) => (
                 <BreadcrumbItem
                     // eslint-disable-next-line react/no-array-index-key
