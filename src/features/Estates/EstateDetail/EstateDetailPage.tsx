@@ -8,6 +8,7 @@ import FilterByRegion from "../EstateList/Components/FilterByRegion";
 import EstateDescription from "./Components/EstateDescription";
 import EstateImageSlider from "./Components/EstateImageSlider/EstateImageSlider";
 import EstateProperties from "./Components/EstateProperties";
+import SameDistrictEstates from "./Components/SameDistrictEstates";
 import SocialShareButtons from "./Components/SocialShareButtons/SocialShareButtons";
 
 const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
@@ -53,6 +54,7 @@ const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
                         <EstateDescription />
                         <SocialShareButtons />
                     </div>
+                    <SameDistrictEstates />
                 </ContentWrapperBody>
                 <ContentWrapperAside>
                     <EstateSearch />

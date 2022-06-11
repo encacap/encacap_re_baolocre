@@ -2,7 +2,7 @@ const EstateDescription = () => {
     return (
         <>
             <div className="text-lg font-semibold">Thông tin chi tiết</div>
-            <div className="pt-2 pb-1 estate-content">
+            <div className="pt-3 pb-1 estate-content">
                 <p>
                     <span>🌈🌈🌈 Chúng tôi cần bán lô đất thổ cư hẻm 75 Trần Tế Xương rộng 8m.</span>
                     <span>Hẻm rộng 8m mới trải nhựa 6m.</span>

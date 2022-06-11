@@ -26,7 +26,7 @@ const EstateVertical = ({ title }: EstatesHorizontalProps) => (
                     </div>
                 </div>
                 <img
-                    src="https://res.cloudinary.com/baolocre-estatesone/image/upload/c_thumb,g_center,w_300/v1641826072/baolocre_estate/mwdrilfrdj7glunmoswm.jpg"
+                    src="https://res.cloudinary.com/baolocre-estatesone/image/upload/c_thumb,g_center,w_300/v1648445896/baolocre_estate/pv6wide7sq11dtl82zk4.jpg"
                     className="relative z-0 object-cover object-center w-full h-full rounded-md md:rounded-none"
                     alt="<%= estate.title %>"
                     loading="lazy"
