@@ -1,6 +1,6 @@
-import IconWrapper, { type IconProps } from "./IconWrapper";
+import IconWrapper, { IconProps } from "./IconWrapper";
 
-const FacebookIcon = ({ href }: IconProps) => {
+const WrappedFacebookIcon = ({ href }: IconProps) => {
     return (
         <IconWrapper href={href} className="hover:border-blue-500 hover:text-blue-500 hover:bg-blue-100">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6">
@@ -10,4 +10,4 @@ const FacebookIcon = ({ href }: IconProps) => {
     );
 };
 
-export default FacebookIcon;
+export default WrappedFacebookIcon;

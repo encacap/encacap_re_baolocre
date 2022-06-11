@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import { twMerge } from "tailwind-merge";
-import FacebookIcon from "../../../Icons/FacebookIcon";
-import YoutubeIcon from "../../../Icons/YoutubeIcon";
+import WrappedFacebookIcon from "../Components/WrappedFacebookIcon";
+import WrappedYoutubeIcon from "../Components/WrappedYoutubeIcon";
 
 interface FooterProps {
     color: "light" | "dark";
@@ -25,8 +25,8 @@ const Footer = ({ color }: FooterProps) => {
                     </a>
                     <div>
                         <div className="flex lg:hidden">
-                            <YoutubeIcon href="https://www.facebook.com/encacap" />
-                            <FacebookIcon href="https://www.facebook.com/encacap" />
+                            <WrappedYoutubeIcon href="https://www.facebook.com/encacap" />
+                            <WrappedFacebookIcon href="https://www.facebook.com/encacap" />
                         </div>
                     </div>
                 </div>
@@ -67,8 +67,8 @@ const Footer = ({ color }: FooterProps) => {
                     </div>
                     <div className="hidden lg:flex">
                         <div className="flex items-center lg:ml-16">
-                            <YoutubeIcon href="https://www.facebook.com/encacap" />
-                            <FacebookIcon href="https://www.facebook.com/encacap" />
+                            <WrappedYoutubeIcon href="https://www.facebook.com/encacap" />
+                            <WrappedFacebookIcon href="https://www.facebook.com/encacap" />
                         </div>
                     </div>
                 </div>
