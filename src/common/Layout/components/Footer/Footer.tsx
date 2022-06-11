@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import { twMerge } from "tailwind-merge";
-import FacebookIcon from "../../../Icon/FacebookIcon";
-import YoutubeIcon from "../../../Icon/YoutubeIcon";
+import FacebookIcon from "../../../Icons/FacebookIcon";
+import YoutubeIcon from "../../../Icons/YoutubeIcon";
 
 interface FooterProps {
     color: "light" | "dark";
