@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "NODE_ENV=development node ./server.js",
+        "dev": "NODE_ENV=development SERVER_HOSTNAME=baolocre.dev SERVER_PORT=3000 node ./server.js",
         "build": "next build",
         "start": "NODE_ENV=production node ./server.js",
         "lint": "eslint . --fix"
