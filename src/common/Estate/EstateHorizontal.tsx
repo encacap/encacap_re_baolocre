@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
+import { EstateType } from "../../types/commonTypes";
 import Button from "../Button/Button";
 import LocationIcon from "../Icons/LocationIcon";
 import PhoneRingIcon from "../Icons/PhoneRingIcon";
 import YoutubeIcon from "../Icons/YoutubeIcon";
-import { EstateType } from "../Types/commonTypes";
 
 interface EstateHorizontalProps extends EstateType {
     priority?: boolean;

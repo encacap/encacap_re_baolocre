@@ -1,5 +1,5 @@
 import Category from "../../../common/Category/Category";
-import { CategoryType } from "../../../common/Types/commonTypes";
+import { CategoryType } from "../../../types/commonTypes";
 import EstateSearch from "../EstateList/Components/EstateSearch";
 
 interface ContentHeaderProps {

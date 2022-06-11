@@ -1,7 +1,7 @@
 import Breadcrumb from "../../../common/Breadcrumb/Breadcrumb";
 import LocationIcon from "../../../common/Icons/LocationIcon";
 import { ContentWrapper, ContentWrapperAside, ContentWrapperBody, PageLayout } from "../../../common/Layout";
-import { EstateDetailPageProps } from "../../../common/Types/pageProps";
+import { EstateDetailPageProps } from "../../../types/pageProps";
 import EstateContentHeader from "../Components/EstateContentHeader";
 import EstateSearch from "../EstateList/Components/EstateSearch";
 import FilterByRegion from "../EstateList/Components/FilterByRegion";
