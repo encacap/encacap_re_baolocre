@@ -1,5 +1,5 @@
-import { HiOutlineLocationMarker } from "react-icons/hi";
 import Breadcrumb from "../../../common/Breadcrumb/Breadcrumb";
+import LocationIcon from "../../../common/Icons/LocationIcon";
 import { ContentWrapper, ContentWrapperAside, ContentWrapperBody, PageLayout } from "../../../common/Layout";
 import { EstateDetailPageProps } from "../../../common/Types/pageProps";
 import EstateContentHeader from "../Components/EstateContentHeader";
@@ -48,7 +48,7 @@ const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
                         ĐẤT NỀN TP BẢO LỘC. HẺM TRẦN KẾ XƯƠNG
                     </div>
                     <div className="flex font-semibold md:items-center">
-                        <HiOutlineLocationMarker className="flex-shrink-0 mt-1 mr-4 text-lg" />
+                        <LocationIcon className="flex-shrink-0 w-5 h-5 mt-1 mr-4 md:mt-0" />
                         Đường Blaosire, Phường 2, Thành phố Bảo Lộc, Lâm Đồng
                     </div>
                     <EstateProperties />

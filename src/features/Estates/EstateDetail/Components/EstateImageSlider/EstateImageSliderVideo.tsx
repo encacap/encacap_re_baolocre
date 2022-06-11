@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
-import { BsYoutube } from "react-icons/bs";
 import YouTube, { YouTubeEvent } from "react-youtube";
+import YoutubeIcon from "../../../../../common/Icons/YoutubeIcon";
 
 interface REDImageSliderVideoProps {
     videoId: string;
@@ -52,7 +52,7 @@ const EstateImageSliderVideo = ({ videoId, thumbnailSrc, priority }: REDImageSli
                             />
                         </div>
                     )}
-                    <BsYoutube className="text-4xl lg:text-7xl" />
+                    <YoutubeIcon className="w-12 sm:w-16 lg:w-20" />
                 </div>
             )}
             <YouTube
