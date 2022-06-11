@@ -27,22 +27,29 @@ const EstateHorizontal = ({
     return (
         <div className="w-full mb-4 overflow-hidden duration-200 group md:flex md:mt-4 md:mb-0 md:rounded-md hover:text-encacap-main md:hover:shadow-gray-100 md:hover:shadow-lg">
             {special && (
-                <div className="relative flex items-center w-full bg-black rounded-lg aspect-video md:hidden">
-                    <Image
-                        src={thumbnail || "/images/no-image.png"}
-                        alt={title}
-                        className="relative z-0 object-cover object-center w-full rounded-md aspect-video md:rounded-none"
-                        layout="fill"
-                        quality={1}
-                        priority={priority}
-                    />
-                </div>
+                <Link href={to}>
+                    <div className="relative flex items-center w-full bg-black rounded-lg aspect-video md:hidden">
+                        <Image
+                            src={thumbnail || "/images/no-image.png"}
+                            alt={title}
+                            className="relative z-0 object-cover object-center w-full rounded-md aspect-video md:rounded-none"
+                            layout="fill"
+                            quality={1}
+                            priority={priority}
+                        />
+                    </div>
+                </Link>
             )}
-            <div
-                className={twMerge("block py-3 font-semibold uppercase md:hidden text-encacap-main", special && "pb-0")}
-            >
-                {title}
-            </div>
+            <Link href={to}>
+                <div
+                    className={twMerge(
+                        "block py-3 font-semibold uppercase md:hidden text-encacap-main",
+                        special && "pb-0"
+                    )}
+                >
+                    {title}
+                </div>
+            </Link>
             <div className="flex w-full">
                 <Link href={to}>
                     <a
