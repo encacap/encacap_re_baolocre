@@ -1,5 +1,5 @@
-import FacebookIcon from "../../../Icon/FacebookIcon";
-import YoutubeIcon from "../../../Icon/YoutubeIcon";
+import FacebookIcon from "../../../Icons/FacebookIcon";
+import YoutubeIcon from "../../../Icons/YoutubeIcon";
 
 const SocialItems = () => (
     <div className="hidden lg:flex">
