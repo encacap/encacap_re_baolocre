@@ -6,6 +6,8 @@ interface CustomHeadProps {
 }
 
 const CustomHead = ({ title }: CustomHeadProps) => {
+    console.log(process.env.NEXT_PUBLIC_WEBSITE_NAME);
+
     const websiteName = useMemo(() => process.env.NEXT_PUBLIC_WEBSITE_NAME, []);
 
     return (
