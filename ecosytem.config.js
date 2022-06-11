@@ -6,8 +6,7 @@ module.exports = {
             args: "start",
             env_staging: {
                 NODE_ENV: "production",
-                SERVER_PORT: 22402,
-                SERVER_HOSTNAME: "localhost",
+                NEXT_PUBLIC_WEBSITE_NAME: "Bất động sản nghỉ dưỡng Bảo Lộc",
             },
         },
     ],
