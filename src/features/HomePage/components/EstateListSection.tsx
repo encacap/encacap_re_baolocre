@@ -20,12 +20,12 @@ const EstateListSection = () => (
             <EstateVertical title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
             <EstateVertical title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
         </div>
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mx-4 mt-6 md:mt-10 md:mx-0">
             <a
                 href="/bat-dong-san-ban"
-                className="flex items-center py-3 pl-6 pr-4 font-semibold duration-200 bg-white border-2 border-gray-300 rounded-full hover:border-encacap-main hover:text-encacap-main"
+                className="flex items-center justify-center w-full py-3 pl-6 pr-4 font-semibold duration-200 bg-white border-2 border-gray-300 rounded-lg md:w-fit md:rounded-full hover:border-encacap-main hover:text-encacap-main"
             >
-                Xem tất cả bất động sản đang bán
+                Xem thêm 4 bất động sản khác
                 <ChevronRightIcon className="w-5 ml-2" />
             </a>
         </div>

@@ -11,14 +11,12 @@ const NewsSection = () => (
             <div className="w-20 h-1 mx-auto mt-4 bg-encacap-main" />
         </div>
         <NewsList />
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-6 md:mt-10 md:mx-0">
             <a
                 href="/tin-tuc"
-                className="flex items-center px-6 py-3 font-semibold duration-200 bg-white border-2 border-gray-300 rounded-full hover:border-encacap-main hover:text-encacap-main"
+                className="flex items-center justify-center w-full py-3 pl-6 pr-4 font-semibold duration-200 bg-white border-2 border-gray-300 rounded-lg md:w-fit md:rounded-full hover:border-encacap-main hover:text-encacap-main"
             >
-                Xem thêm
-                <span className="mx-1">4</span>
-                tin tức khác
+                Xem thêm 4 tin túc khác
                 <ChevronRightIcon className="w-5 ml-2" />
             </a>
         </div>
