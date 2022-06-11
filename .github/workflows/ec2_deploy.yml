@@ -33,7 +33,8 @@ jobs:
                   port: ${{ secrets.SSH_PORT }}
                   script_stop: true
                   script: |
-                      ssh-init
+                      eval `ssh-agent`
+                      ssh-add ~/.ssh/github
                       cd baolocre_fe_beta
                       git pull origin master
                       yarn build
