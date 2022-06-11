@@ -65,6 +65,7 @@ const EstateHorizontal = ({
                                 className="relative z-0 object-cover object-center w-full rounded-md aspect-video md:rounded-none"
                                 layout="fill"
                                 priority={priority}
+                                quality={1}
                             />
                         </div>
                         <div className="relative flex items-center w-full bg-black aspect-video">
