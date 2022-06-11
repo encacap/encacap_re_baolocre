@@ -5,6 +5,7 @@ import Pagination from "../../../common/Pagination/Pagination";
 import { NewsListPageProps } from "../../../types/pageProps";
 import NewsContentHeader from "../Components/NewsContentHeader";
 import NewsSearch from "../Components/NewsSearch";
+import NewsList from "./Components/NewsList";
 
 const NewsListPage = ({ head, categories }: NewsListPageProps) => {
     return (
@@ -26,7 +27,8 @@ const NewsListPage = ({ head, categories }: NewsListPageProps) => {
                     />
                     <div className="py-2 text-2xl font-semibold">Danh sách tin tức mới nhất</div>
                     <div className="mb-6 md:mb-8">Hiện có tất cả 7 tin tức</div>
-                    <Pagination className="pt-6 mt-4 mb-6 border-t-2 border-gray-100 md:pt-4 md:justify-end md:mt-0 md:mb-0 md:border-t-0" />
+                    <NewsList />
+                    <Pagination className="pt-6 mb-6 border-t-2 border-gray-100 md:pt-4 md:justify-end md:mt-6 md:mb-0 md:border-t-0" />
                 </ContentWrapperBody>
                 <ContentWrapperAside>
                     <NewsSearch />

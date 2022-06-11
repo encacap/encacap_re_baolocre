@@ -1,5 +1,5 @@
 import { newsCategories } from "../../const/data";
-import NewsListPage from "../../features/News/NewsList/NewsList";
+import NewsListPage from "../../features/News/NewsList/NewsListPage";
 import { NewsListPageProps } from "../../types/pageProps";
 
 const Home = (props: NewsListPageProps) => <NewsListPage {...props} />;
