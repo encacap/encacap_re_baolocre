@@ -21,6 +21,10 @@ export interface EstateType {
     };
 }
 
+export interface NewsType {
+    title: string;
+}
+
 export interface HTMLHeadType {
     title: string;
 }

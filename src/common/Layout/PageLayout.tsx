@@ -1,17 +1,17 @@
 import CustomHead from "../CustomHead/CustomHead";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
+import Footer from "./Components/Footer/Footer";
+import Header, { HeaderProps } from "./Components/Header/Header";
 
-interface LayoutProps {
+interface LayoutProps extends HeaderProps {
     children: React.ReactNode;
     title?: string;
     footerColor?: "light" | "dark";
 }
 
-const PageLayout = ({ children, title = "Trang chủ", footerColor = "light" }: LayoutProps) => (
+const PageLayout = ({ children, title = "Trang chủ", footerColor = "light", isHideMobileNavbar }: LayoutProps) => (
     <>
         <CustomHead title={title} />
-        <Header />
+        <Header isHideMobileNavbar={isHideMobileNavbar} />
         {children}
         <Footer color={footerColor} />
     </>

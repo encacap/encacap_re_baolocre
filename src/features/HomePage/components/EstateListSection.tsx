@@ -1,5 +1,5 @@
-import { BiChevronRight } from "react-icons/bi";
-import EstateHorizontal from "../../../common/Estate/EstateHorizontal";
+import EstateVertical from "../../../common/Estate/EstateVertical";
+import ChevronRightIcon from "../../../common/Icons/ChevronRightIcon";
 
 const EstateListSection = () => (
     <section className="py-10 border-t-2 border-b-2 border-gray-100 md:border-t-0 md:border-b-0 md:px-4 lg:px-10 xl:px-48 md:py-20 md:bg-gray-100">
@@ -11,22 +11,22 @@ const EstateListSection = () => (
             <div className="w-20 h-1 mx-auto mt-4 bg-encacap-main" />
         </div>
         <div className="grid px-4 mt-10 md:gap-4 md:grid-cols-3 lg:grid-cols-4 md:px-0">
-            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
-            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
-            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
-            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
-            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
-            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
-            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
-            <EstateHorizontal title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
+            <EstateVertical title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" isSpecial />
+            <EstateVertical title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
+            <EstateVertical title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
+            <EstateVertical title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
+            <EstateVertical title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
+            <EstateVertical title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
+            <EstateVertical title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
+            <EstateVertical title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
         </div>
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mx-4 mt-6 md:mt-10 md:mx-0">
             <a
                 href="/bat-dong-san-ban"
-                className="flex items-center py-3 pl-6 pr-4 font-semibold duration-200 bg-white border-2 border-gray-300 rounded-full hover:border-encacap-main hover:text-encacap-main"
+                className="flex items-center justify-center w-full py-3 pl-6 pr-4 font-semibold duration-200 bg-white border-2 border-gray-300 rounded-lg md:w-fit md:rounded-full hover:border-encacap-main hover:text-encacap-main"
             >
-                Xem tất cả bất động sản đang bán
-                <BiChevronRight size={22} className="ml-2" />
+                Xem thêm 4 bất động sản khác
+                <ChevronRightIcon className="w-5 ml-2" />
             </a>
         </div>
     </section>

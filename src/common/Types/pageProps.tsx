@@ -8,3 +8,8 @@ export interface EstateListPageProps {
     head: HTMLHeadType;
     categories: CategoryType[];
 }
+
+export interface EstateDetailPageProps {
+    head: HTMLHeadType;
+    categories: CategoryType[];
+}

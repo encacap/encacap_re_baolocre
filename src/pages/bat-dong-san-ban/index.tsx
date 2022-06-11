@@ -1,6 +1,6 @@
 import { CategoryType } from "../../common/Types/commonTypes";
 import { EstateListPageProps } from "../../common/Types/pageProps";
-import EstateListPage from "../../features/Estates/EstateListPage";
+import EstateListPage from "../../features/Estates/EstateList/EstateListPage";
 
 const Home = (props: EstateListPageProps) => <EstateListPage {...props} />;
 

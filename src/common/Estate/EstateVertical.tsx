@@ -1,83 +1,107 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaYoutube } from "react-icons/fa";
-import { FiPhoneCall } from "react-icons/fi";
-import { HiOutlineLocationMarker } from "react-icons/hi";
-import Button from "../Button/Button";
-import { EstateType } from "../Types/commonTypes";
+import { twMerge } from "tailwind-merge";
+import LocationIcon from "../Icons/LocationIcon";
+import PhoneRingIcon from "../Icons/PhoneRingIcon";
+import YoutubeIcon from "../Icons/YoutubeIcon";
 
-interface EstateVerticalProps extends EstateType {}
+interface EstatesHorizontalProps {
+    title: string;
+    isSpecial?: boolean;
+    priority?: boolean;
+}
 
-/* eslint-disable max-len */
-const EstateVertical = ({
-    title,
-    avatar,
-    thumbnail,
-    price,
-    area,
-    location,
-    description,
-    contact,
-}: EstateVerticalProps) => {
-    return (
-        <div className="w-full mb-4 overflow-hidden duration-200 group md:flex md:mt-4 md:mb-0 md:rounded-md hover:text-encacap-main md:hover:shadow-gray-200 md:hover:shadow-lg">
-            <div className="block py-3 font-semibold uppercase md:hidden text-encacap-main">{title}</div>
-            <div className="flex w-full">
-                <Link href="/">
-                    <a className="relative w-28 md:w-64 h-28 md:h-auto">
-                        {/* <div className="absolute bottom-0 z-20 flex items-center justify-center w-full py-1 md:py-1.5 pl-3 text-sm font-semibold text-white bg-black rounded-md md:right-0 md:w-auto opacity-70 md:rounded-br-none">
-                            <div className="flex items-center mr-3">
-                                <BiImage size={24} />
-                                <span className="ml-1.5">2</span>
-                            </div>
-                        </div> */}
-                        <div className="flex items-center w-full h-full bg-black">
-                            <Image
-                                src={thumbnail || "/images/no-image.png"}
-                                alt={title}
-                                className="relative z-0 object-cover object-center w-full rounded-md aspect-video md:rounded-none"
-                                layout="fill"
-                            />
-                        </div>
-                        {avatar?.type === "video" && (
-                            <div className="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center text-3xl text-white duration-200 -translate-y-3 md:translate-y-0 md:text-5xl group-hover:text-red-500">
-                                <FaYoutube />
-                            </div>
-                        )}
-                    </a>
-                </Link>
-                <div className="flex flex-col justify-center flex-1 pl-4 border-b-0 border-l-0 border-gray-100 rounded-r-md md:border-2 md:px-5 md:py-4">
-                    <Link href="/">
-                        <a className="flex flex-col flex-1">
-                            <div className="hidden font-semibold uppercase md:block text-encacap-main">{title}</div>
-                            <div className="py-1 font-semibold md:py-2">
-                                <span className="">{price}</span>
-                                <span className="px-2 text-gray-400">·</span>
-                                <span>
-                                    {area} m<sup>2</sup>
-                                </span>
-                            </div>
-                            <div className="flex items-center -ml-1">
-                                <HiOutlineLocationMarker className="mr-2" size={20} />
-                                <div className="line-clamp-1">
-                                    {location?.district}, {location?.city}
-                                </div>
-                            </div>
-                            <div className="flex-1 hidden mt-2 text-gray-500 md:line-clamp-3">{description}</div>
-                        </a>
-                    </Link>
-                    <div className="flex mt-3 mb-1 md:mt-5">
-                        <a href={`tel:${contact?.phone}`} className="block w-full">
-                            <Button color="gray" className="w-full">
-                                <FiPhoneCall size={20} className="mr-3" />
-                                <div>{contact?.phone}</div>
-                            </Button>
-                        </a>
+const EstateVertical = ({ title, isSpecial, priority = false }: EstatesHorizontalProps) => (
+    <div className="overflow-hidden duration-200 bg-white border-b-2 border-gray-100 group md:shadow-md md:shadow-gray-200 md:rounded-lg md:border-b-0 md:hover:shadow-lg last:border-b-0">
+        {isSpecial && (
+            <Link href="/bat-dong-san-ban/nghi-duong/quang-ngai/tu-nghia/la-ha/dat-nen-o-dau-do/1">
+                <div className="relative flex items-center w-full bg-black rounded-lg aspect-video md:hidden">
+                    <Image
+                        src="https://res.cloudinary.com/baolocre-estatesone/image/upload/c_thumb,g_center,w_300/v1648445896/baolocre_estate/pv6wide7sq11dtl82zk4.jpg"
+                        alt={title}
+                        className="relative z-0 object-cover object-center w-full rounded-md aspect-video md:rounded-none"
+                        layout="fill"
+                        quality={1}
+                        priority={priority}
+                    />
+                    <div className="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center text-white duration-200 hover:text-red-500">
+                        <YoutubeIcon className="w-12" />
                     </div>
                 </div>
+            </Link>
+        )}
+        <Link href="/bat-dong-san-ban/nghi-duong/quang-ngai/tu-nghia/la-ha/dat-nen-o-dau-do/1">
+            <a
+                className={twMerge(
+                    "block py-3 font-semibold uppercase duration-200 md:hidden md:px-4 text-encacap-main",
+                    isSpecial && "pb-1.5"
+                )}
+            >
+                {title}
+            </a>
+        </Link>
+        <div className="flex mb-4 md:block md:mb-0">
+            <Link href="/bat-dong-san-ban/nghi-duong/quang-ngai/tu-nghia/la-ha/dat-nen-o-dau-do/1">
+                <a
+                    className={twMerge(
+                        "relative mr-4 md:w-full w-28 h-28 md:h-44 md:mr-0 rounded-lg md:rounded-none overflow-hidden flex items-center bg-gray-100",
+                        isSpecial && "hidden md:flex"
+                    )}
+                >
+                    <div className="absolute inset-0 blur-xl">
+                        <Image
+                            src="https://res.cloudinary.com/baolocre-estatesone/image/upload/c_thumb,g_center,w_300/v1648445896/baolocre_estate/pv6wide7sq11dtl82zk4.jpg"
+                            alt={title}
+                            className="relative z-0 object-cover object-center w-full rounded-md aspect-video md:rounded-none"
+                            layout="fill"
+                            priority={priority}
+                            quality={1}
+                        />
+                    </div>
+                    <div className="relative flex items-center w-full bg-black aspect-video">
+                        <Image
+                            src="https://res.cloudinary.com/baolocre-estatesone/image/upload/c_thumb,g_center,w_300/v1648445896/baolocre_estate/pv6wide7sq11dtl82zk4.jpg"
+                            alt={title}
+                            className="relative z-0 object-cover object-center w-full aspect-video md:rounded-none"
+                            layout="fill"
+                            priority={priority}
+                        />
+                    </div>
+                    <div className="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center text-white duration-200 hover:text-red-500">
+                        <YoutubeIcon className="w-12" />
+                    </div>
+                </a>
+            </Link>
+            <div className="flex flex-col justify-center flex-1 md:block">
+                <Link href="/bat-dong-san-ban/nghi-duong/quang-ngai/tu-nghia/la-ha/dat-nen-o-dau-do/1">
+                    <a className="block py-0 md:pt-4 md:px-5">
+                        <div className="hidden font-semibold uppercase duration-200 md:block md:h-12 text-encacap-main md:line-clamp-2">
+                            {title}
+                        </div>
+                        <div className="block mb-1 font-semibold md:my-3">
+                            <span>
+                                20 tr/m<sup>2</sup>
+                            </span>
+                            <span className="px-1 text-gray-400 md:px-2">·</span>
+                            <span>
+                                100 m<sup>2</sup>
+                            </span>
+                        </div>
+                        <div className="flex items-center">
+                            <LocationIcon className="flex-shrink-0 w-5 mr-2 text-zinc-500" />
+                            <div className="line-clamp-1">Thành phố Bảo Lộc, Lâm Đồng</div>
+                        </div>
+                    </a>
+                </Link>
+                <a href="tel:<%= estate.contact.phone %>" className="flex md:px-5 md:mt-2 md:mb-4">
+                    <div className="flex items-center justify-center flex-1 px-2 py-2 mt-3 text-sm font-semibold text-center duration-100 border-2 border-gray-100 rounded-md bg-gray-50 md:mt-4 md:mb-2 hover:text-white hover:bg-encacap-main hover:border-encacap-main">
+                        <PhoneRingIcon className="w-5 mr-3" />
+                        076 811 2358
+                    </div>
+                </a>
             </div>
         </div>
-    );
-};
+    </div>
+);
 
 export default EstateVertical;

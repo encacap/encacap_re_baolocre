@@ -8,7 +8,7 @@ import SearchSection from "./components/SearchSection";
 import SliderSection from "./components/SliderSection";
 
 const HomePage = ({ head }: HomePageProps) => (
-    <PageLayout title={head.title} footerColor="dark">
+    <PageLayout title={head.title} footerColor="dark" isHideMobileNavbar>
         <SliderSection />
         <SearchSection />
         <CategorySection />
