@@ -10,6 +10,7 @@ import EstateImageSlider from "./Components/EstateImageSlider/EstateImageSlider"
 import EstateProperties from "./Components/EstateProperties";
 import SameDistrictEstates from "./Components/SameDistrictEstates";
 import SocialShareButtons from "./Components/SocialShareButtons/SocialShareButtons";
+import SuggestionEstates from "./Components/SuggestionEstates";
 
 const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
     return (
@@ -55,6 +56,7 @@ const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
                         <SocialShareButtons />
                     </div>
                     <SameDistrictEstates />
+                    <SuggestionEstates />
                 </ContentWrapperBody>
                 <ContentWrapperAside>
                     <EstateSearch />
