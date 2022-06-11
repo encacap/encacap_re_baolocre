@@ -1,6 +1,6 @@
 import CustomHead from "../CustomHead/CustomHead";
-import Footer from "./components/Footer/Footer";
-import Header, { HeaderProps } from "./components/Header/Header";
+import Footer from "./Components/Footer/Footer";
+import Header, { HeaderProps } from "./Components/Header/Header";
 
 interface LayoutProps extends HeaderProps {
     children: React.ReactNode;

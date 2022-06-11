@@ -1,5 +1,5 @@
-import WrappedFacebookIcon from "../Components/WrappedFacebookIcon";
-import WrappedYoutubeIcon from "../Components/WrappedYoutubeIcon";
+import WrappedFacebookIcon from "../WrappedFacebookIcon";
+import WrappedYoutubeIcon from "../WrappedYoutubeIcon";
 
 const SocialItems = () => (
     <div className="hidden lg:flex">

@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FiPhoneCall } from "react-icons/fi";
-import { HiOutlineLocationMarker } from "react-icons/hi";
 import { twMerge } from "tailwind-merge";
 import Button from "../Button/Button";
+import LocationIcon from "../Icons/LocationIcon";
+import PhoneRingIcon from "../Icons/PhoneRingIcon";
+import YoutubeIcon from "../Icons/YoutubeIcon";
 import { EstateType } from "../Types/commonTypes";
 
 interface EstateHorizontalProps extends EstateType {
@@ -37,6 +38,9 @@ const EstateHorizontal = ({
                             quality={1}
                             priority={priority}
                         />
+                        <div className="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center text-white duration-200 hover:text-red-500">
+                            <YoutubeIcon className="w-12" />
+                        </div>
                     </div>
                 </Link>
             )}
@@ -77,12 +81,14 @@ const EstateHorizontal = ({
                                 priority={priority}
                             />
                         </div>
+                        <div className="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center text-white duration-200 hover:text-red-500">
+                            <YoutubeIcon className="w-12" />
+                        </div>
                     </a>
                 </Link>
                 <div
                     className={twMerge(
                         "flex flex-col justify-center flex-1 pl-4 md:border-l-transparent border-gray-100 rounded-r-md md:border-2 md:px-5 md:py-4",
-                        // eslint-disable-next-line comma-dangle
                         special && "pl-0"
                     )}
                 >
@@ -96,8 +102,8 @@ const EstateHorizontal = ({
                                     {area} m<sup>2</sup>
                                 </span>
                             </div>
-                            <div className="flex items-center -ml-1">
-                                <HiOutlineLocationMarker className="ml-1 mr-2" size={20} />
+                            <div className="flex items-center">
+                                <LocationIcon className="w-5 mr-2" />
                                 <div className="line-clamp-1">
                                     {location?.district}, {location?.city}
                                 </div>
@@ -108,7 +114,7 @@ const EstateHorizontal = ({
                     <div className="flex mt-3 mb-1 md:mt-5">
                         <a href={`tel:${contact?.phone}`} className="block w-full">
                             <Button color="gray" className="w-full">
-                                <FiPhoneCall size={20} className="mr-3" />
+                                <PhoneRingIcon className="w-5 mr-3" />
                                 <div>{contact?.phone}</div>
                             </Button>
                         </a>

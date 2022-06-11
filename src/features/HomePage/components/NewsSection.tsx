@@ -1,3 +1,4 @@
+import ChevronRightIcon from "../../../common/Icons/ChevronRightIcon";
 import NewsList from "./NewsList";
 
 const NewsSection = () => (
@@ -18,16 +19,7 @@ const NewsSection = () => (
                 Xem thêm
                 <span className="mx-1">4</span>
                 tin tức khác
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 ml-2" fill="none">
-                    <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeMiterlimit="10"
-                        strokeWidth="2"
-                        d="M14.43 5.93L20.5 12l-6.07 6.07M3.5 12h16.83"
-                    />
-                </svg>
+                <ChevronRightIcon className="w-5 ml-2" />
             </a>
         </div>
     </section>

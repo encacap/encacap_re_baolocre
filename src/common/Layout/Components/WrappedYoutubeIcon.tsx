@@ -1,4 +1,4 @@
-import YoutubeIcon from "../../../Icons/YoutubeIcon";
+import YoutubeIcon from "../../Icons/YoutubeIcon";
 import IconWrapper, { IconProps } from "./IconWrapper";
 
 const WrappedYoutubeIcon = ({ href }: IconProps) => {

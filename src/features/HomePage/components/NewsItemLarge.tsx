@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ClockIcon from "../../../common/Icons/ClockIcon";
 import { NewsType } from "../../../common/Types/commonTypes";
 
 interface NewsProps {
@@ -19,22 +20,7 @@ const NewsItemLarge = ({ news }: NewsProps) => {
                 <div className="pt-4">
                     <div className="font-semibold">{news.title}</div>
                     <div className="flex items-center mt-2 text-sm text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-4 mr-2">
-                            <path
-                                d="M22 12c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10Z"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                            <path
-                                d="m15.71 15.18-3.1-1.85c-.54-.32-.98-1.09-.98-1.72v-4.1"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
+                        <ClockIcon className="w-4 mr-2" />
                         <span>11/05/2022 - 14:39:25</span>
                     </div>
                 </div>

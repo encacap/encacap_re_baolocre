@@ -1,5 +1,5 @@
-import { BiChevronRight } from "react-icons/bi";
 import EstateVertical from "../../../common/Estate/EstateVertical";
+import ChevronRightIcon from "../../../common/Icons/ChevronRightIcon";
 
 const EstateListSection = () => (
     <section className="py-10 border-t-2 border-b-2 border-gray-100 md:border-t-0 md:border-b-0 md:px-4 lg:px-10 xl:px-48 md:py-20 md:bg-gray-100">
@@ -26,7 +26,7 @@ const EstateListSection = () => (
                 className="flex items-center py-3 pl-6 pr-4 font-semibold duration-200 bg-white border-2 border-gray-300 rounded-full hover:border-encacap-main hover:text-encacap-main"
             >
                 Xem tất cả bất động sản đang bán
-                <BiChevronRight size={22} className="ml-2" />
+                <ChevronRightIcon className="w-5 ml-2" />
             </a>
         </div>
     </section>

@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HiOutlineLocationMarker, HiOutlinePhone } from "react-icons/hi";
 import { twMerge } from "tailwind-merge";
+import LocationIcon from "../Icons/LocationIcon";
+import PhoneRingIcon from "../Icons/PhoneRingIcon";
+import YoutubeIcon from "../Icons/YoutubeIcon";
 
 interface EstatesHorizontalProps {
     title: string;
@@ -22,6 +24,9 @@ const EstateVertical = ({ title, isSpecial, priority = false }: EstatesHorizonta
                         quality={1}
                         priority={priority}
                     />
+                    <div className="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center text-white duration-200 hover:text-red-500">
+                        <YoutubeIcon className="w-12" />
+                    </div>
                 </div>
             </Link>
         )}
@@ -29,7 +34,7 @@ const EstateVertical = ({ title, isSpecial, priority = false }: EstatesHorizonta
             <a
                 className={twMerge(
                     "block py-3 font-semibold uppercase duration-200 md:hidden md:px-4 text-encacap-main",
-                    isSpecial && "pb-1"
+                    isSpecial && "pb-1.5"
                 )}
             >
                 {title}
@@ -57,21 +62,13 @@ const EstateVertical = ({ title, isSpecial, priority = false }: EstatesHorizonta
                         <Image
                             src="https://res.cloudinary.com/baolocre-estatesone/image/upload/c_thumb,g_center,w_300/v1648445896/baolocre_estate/pv6wide7sq11dtl82zk4.jpg"
                             alt={title}
-                            className="relative z-0 object-cover object-center w-full rounded-md aspect-video md:rounded-none"
+                            className="relative z-0 object-cover object-center w-full aspect-video md:rounded-none"
                             layout="fill"
                             priority={priority}
                         />
                     </div>
-                    {/* If avatar is a video */}
                     <div className="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center text-white duration-200 hover:text-red-500">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            className="w-12"
-                        >
-                            <path d="M17 4H7C4 4 2 6 2 9v6c0 3 2 5 5 5h10c3 0 5-2 5-5V9c0-3-2-5-5-5zm-3.11 9.03l-2.47 1.48c-1 .6-1.82.14-1.82-1.03v-2.97c0-1.17.82-1.63 1.82-1.03l2.47 1.48c.95.58.95 1.5 0 2.07z" />
-                        </svg>
+                        <YoutubeIcon className="w-12" />
                     </div>
                 </a>
             </Link>
@@ -91,14 +88,14 @@ const EstateVertical = ({ title, isSpecial, priority = false }: EstatesHorizonta
                             </span>
                         </div>
                         <div className="flex items-center">
-                            <HiOutlineLocationMarker size={20} className="flex-shrink-0 mr-1 text-zinc-500" />
+                            <LocationIcon className="flex-shrink-0 w-5 mr-2 text-zinc-500" />
                             <div className="line-clamp-1">Thành phố Bảo Lộc, Lâm Đồng</div>
                         </div>
                     </a>
                 </Link>
                 <a href="tel:<%= estate.contact.phone %>" className="flex md:px-5 md:mt-2 md:mb-4">
                     <div className="flex items-center justify-center flex-1 px-2 py-2 mt-3 text-sm font-semibold text-center duration-100 border-2 border-gray-100 rounded-md bg-gray-50 md:mt-4 md:mb-2 hover:text-white hover:bg-encacap-main hover:border-encacap-main">
-                        <HiOutlinePhone className="mr-2" size={20} />
+                        <PhoneRingIcon className="w-5 mr-3" />
                         076 811 2358
                     </div>
                 </a>
