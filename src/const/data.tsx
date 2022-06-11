@@ -21,4 +21,23 @@ export const estateCategories: CategoryType[] = [
     },
 ];
 
-export const newsCategories: CategoryType[] = [];
+export const newsCategories: CategoryType[] = [
+    {
+        categoryId: 1,
+        name: "Thông tin quy hoạch",
+        url: "/tin-tuc/thong-tin-quy-hoach",
+        image: "/images/categories/thong-tin-quy-hoach.jfif",
+    },
+    {
+        categoryId: 2,
+        name: "Pháp lý Bất động sản",
+        url: "/tin-tuc/phap-ly-bat-dong-san",
+        image: "/images/categories/phap-ly-bat-dong-san.jfif",
+    },
+    {
+        categoryId: 3,
+        name: "Phân tích thị trường",
+        url: "/tin-tuc/phan-tich-thi-truong",
+        image: "/images/categories/phan-tich-thi-truong.jfif",
+    },
+];
