@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { Children, cloneElement } from "react";
+import { Children, cloneElement, useEffect, useRef } from "react";
 
 interface SidebarContainerProps {
     className?: string;
@@ -7,11 +7,28 @@ interface SidebarContainerProps {
 }
 
 const NavbarContainer = ({ className, children: sidebarItems }: SidebarContainerProps) => {
-    const params = useRouter();
+    const { pathname } = useRouter();
+    const navbarContainerRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        const navbarContainerNode = navbarContainerRef.current;
+        const activatedItem = navbarContainerNode?.querySelector<HTMLElement>(`a[href="${pathname}"]`);
+
+        if (!activatedItem) {
+            return;
+        }
+
+        const containerWidth = navbarContainerNode?.getBoundingClientRect().width;
+        const activatedItemWidth = activatedItem?.getBoundingClientRect().width;
+
+        navbarContainerNode.scrollTo({
+            left: activatedItemWidth / 2 - containerWidth / 2,
+        });
+    }, [pathname]);
+
     return (
-        <nav className={className}>
+        <nav ref={navbarContainerRef} className={className}>
             {Children.map(sidebarItems, (child: React.ReactElement) => {
-                const { pathname } = params;
                 const { href } = child.props;
                 if (href === "/") {
                     return cloneElement(child, { isActive: pathname === href });
