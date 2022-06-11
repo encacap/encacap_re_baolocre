@@ -7,7 +7,7 @@ interface EstatesHorizontalProps {
 }
 
 const EstateVertical = ({ title }: EstatesHorizontalProps) => (
-    <div className="overflow-hidden duration-200 bg-white border-b-2 border-gray-100 group md:shadow-md md:shadow-gray-200 md:rounded-lg md:border-b-0 md:hover:shadow-lg">
+    <div className="overflow-hidden duration-200 bg-white border-b-2 border-gray-100 group md:shadow-md md:shadow-gray-200 md:rounded-lg md:border-b-0 md:hover:shadow-lg last:border-b-0">
         <a
             href="<%= estate.url %>"
             className="block py-3 font-semibold uppercase duration-200 md:hidden md:px-4 text-encacap-main"
