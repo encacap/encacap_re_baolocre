@@ -2,7 +2,7 @@ import Breadcrumb from "../../../common/Breadcrumb/Breadcrumb";
 import { ContentWrapper, ContentWrapperAside, ContentWrapperBody } from "../../../common/Layout";
 import PageLayout from "../../../common/Layout/PageLayout";
 import Pagination from "../../../common/Pagination/Pagination";
-import { EstateListPageProps } from "../../../common/Types/pageProps";
+import { EstateListPageProps } from "../../../types/pageProps";
 import EstateContentHeader from "../Components/EstateContentHeader";
 import EstateList from "./Components/EstateList";
 import EstateSearch from "./Components/EstateSearch";

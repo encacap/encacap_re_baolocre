@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ClockIcon from "../../../common/Icons/ClockIcon";
-import { NewsType } from "../../../common/Types/commonTypes";
+import { NewsType } from "../../../types/commonTypes";
 
 interface NewsProps {
     news: NewsType;

@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { twMerge } from "tailwind-merge";
-import { BreadcrumbProps } from "../Types/commonProps";
-import { BreadcrumbType } from "../Types/commonTypes";
+import { BreadcrumbProps } from "../../types/commonProps";
+import { BreadcrumbType } from "../../types/commonTypes";
 import BreadcrumbItem from "./BreadcrumbItem";
 
 const defaultBreadcrumbItems = [

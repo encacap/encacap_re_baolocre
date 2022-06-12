@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
+import Button from "../Button/Button";
 import LocationIcon from "../Icons/LocationIcon";
 import PhoneRingIcon from "../Icons/PhoneRingIcon";
 import YoutubeIcon from "../Icons/YoutubeIcon";
@@ -94,10 +95,10 @@ const EstateVertical = ({ title, isSpecial, priority = false }: EstatesHorizonta
                     </a>
                 </Link>
                 <a href="tel:<%= estate.contact.phone %>" className="flex md:px-5 md:mt-2 md:mb-4">
-                    <div className="flex items-center justify-center flex-1 px-2 py-2 mt-3 text-sm font-semibold text-center duration-100 border-2 border-gray-100 rounded-md bg-gray-50 md:mt-4 md:mb-2 hover:text-white hover:bg-encacap-main hover:border-encacap-main">
+                    <Button color="gray" className="mt-3 md:mt-4 md:mb-2">
                         <PhoneRingIcon className="w-5 mr-3" />
                         076 811 2358
-                    </div>
+                    </Button>
                 </a>
             </div>
         </div>
