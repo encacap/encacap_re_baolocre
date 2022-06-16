@@ -10,12 +10,15 @@ const isDevEnvironment = process.env.NODE_ENV !== "production";
 
 const app = next({ dev: isDevEnvironment, hostname: HOSTNAME, port: PORT });
 const handler = app.getRequestHandler();
+
 const certFolder = "./certs";
+const pemFilePath = `${certFolder}/${HOSTNAME}.pem`;
+const crtFilePath = `${certFolder}/${HOSTNAME}.crt`;
 
 const startSSLServer = async () => {
     const options = {
-        key: fs.readFileSync(`${certFolder}/baolocre.dev.pem`),
-        cert: fs.readFileSync(`${certFolder}/baolocre.dev.crt`),
+        key: fs.readFileSync(pemFilePath),
+        cert: fs.readFileSync(crtFilePath),
     };
 
     app.prepare().then(() => {
@@ -36,13 +39,22 @@ const startNormalServer = async () => {
     app.prepare().then(() => {
         createNormalServer(handler).listen(PORT, () => {
             // eslint-disable-next-line no-console
-            console.log(`> Ready on http://${HOSTNAME}:${PORT}`);
+            console.log(`> Ready on http://localhost:${PORT}`);
         });
     });
 };
 
-if (isDevEnvironment) {
-    startSSLServer();
-} else {
+const startServer = () => {
+    if (isDevEnvironment) {
+        if (fs.existsSync(pemFilePath) && fs.existsSync(crtFilePath)) {
+            startSSLServer();
+            return;
+        }
+        startNormalServer();
+        return;
+    }
     startNormalServer();
-}
+};
+
+// Start the server
+startServer();
