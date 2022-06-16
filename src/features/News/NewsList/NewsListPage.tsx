@@ -5,6 +5,7 @@ import Pagination from "../../../common/Pagination/Pagination";
 import { NewsListPageProps } from "../../../types/pageProps";
 import NewsContentHeader from "../Components/NewsContentHeader";
 import NewsSearch from "../Components/NewsSearch";
+import MostViewedInMonth from "./Components/MostViewedInMonth";
 import NewsList from "./Components/NewsList";
 
 const NewsListPage = ({ head, categories }: NewsListPageProps) => {
@@ -32,6 +33,7 @@ const NewsListPage = ({ head, categories }: NewsListPageProps) => {
                 </ContentWrapperBody>
                 <ContentWrapperAside>
                     <NewsSearch />
+                    <MostViewedInMonth />
                 </ContentWrapperAside>
             </ContentWrapper>
         </PageLayout>
