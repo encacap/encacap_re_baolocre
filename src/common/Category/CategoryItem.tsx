@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CategoryItemProps } from "../Types/commonProps";
+import { CategoryItemProps } from "../../types/commonProps";
 
 const CategoryItem = ({ name, url, image, ...otherProps }: CategoryItemProps) => {
     return (

@@ -1,5 +1,5 @@
 import PageLayout from "../../common/Layout/PageLayout";
-import { HomePageProps } from "../../common/Types/pageProps";
+import { HomePageProps } from "../../types/pageProps";
 import CategorySection from "./components/CategorySection";
 import EstateListSection from "./components/EstateListSection";
 import HouseModelSection from "./components/HouseModelSection";

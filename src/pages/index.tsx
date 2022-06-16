@@ -1,5 +1,5 @@
-import { HomePageProps } from "../common/Types/pageProps";
 import HomePage from "../features/HomePage/HomePage";
+import { HomePageProps } from "../types/pageProps";
 
 const Home = (props: HomePageProps) => <HomePage {...props} />;
 

@@ -13,3 +13,8 @@ export interface EstateDetailPageProps {
     head: HTMLHeadType;
     categories: CategoryType[];
 }
+
+export interface NewsListPageProps {
+    head: HTMLHeadType;
+    categories: CategoryType[];
+}

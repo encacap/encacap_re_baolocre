@@ -1,18 +1,18 @@
 import Category from "../../../common/Category/Category";
 import { CategoryType } from "../../../types/commonTypes";
-import EstateSearch from "../EstateList/Components/EstateSearch";
+import NewsSearch from "./NewsSearch";
 
 interface ContentHeaderProps {
     categories: CategoryType[];
 }
 
-const EstateContentHeader = ({ categories }: ContentHeaderProps) => {
+const NewsContentHeader = ({ categories }: ContentHeaderProps) => {
     return (
         <div>
             <Category categories={categories} />
-            <EstateSearch className="block mb-6 -mt-4 md:-mt-2 md:mb-5 lg:hidden" />
+            <NewsSearch className="block mb-6 -mt-4 md:-mt-2 md:mb-5 lg:hidden" />
         </div>
     );
 };
 
-export default EstateContentHeader;
+export default NewsContentHeader;

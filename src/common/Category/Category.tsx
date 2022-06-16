@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import { CategoryListProps } from "../Types/commonProps";
+import { CategoryListProps } from "../../types/commonProps";
 import CategoryItem from "./CategoryItem";
 
 const Category = ({ categories, className, ...otherProps }: CategoryListProps) => {
