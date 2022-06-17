@@ -15,7 +15,7 @@ const certFolder = "./certs";
 const pemFilePath = `${certFolder}/${HOSTNAME}.pem`;
 const crtFilePath = `${certFolder}/${HOSTNAME}.crt`;
 
-const startSSLServer = async () => {
+const startSSLServer = () => {
     const options = {
         key: fs.readFileSync(pemFilePath),
         cert: fs.readFileSync(crtFilePath),
@@ -35,7 +35,7 @@ const startSSLServer = async () => {
     });
 };
 
-const startNormalServer = async () => {
+const startNormalServer = () => {
     app.prepare().then(() => {
         createNormalServer(handler).listen(PORT, () => {
             // eslint-disable-next-line no-console
