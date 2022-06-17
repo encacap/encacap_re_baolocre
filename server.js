@@ -11,7 +11,7 @@ const isDevEnvironment = process.env.NODE_ENV !== "production";
 const app = next({ dev: isDevEnvironment, hostname: HOSTNAME, port: PORT });
 const handler = app.getRequestHandler();
 
-const certFolder = "./certs";
+const certFolder = "./.certs";
 const pemFilePath = `${certFolder}/${HOSTNAME}.pem`;
 const crtFilePath = `${certFolder}/${HOSTNAME}.crt`;
 

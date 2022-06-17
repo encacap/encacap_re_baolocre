@@ -33,4 +33,4 @@ yarn-error.log*
 .vercel
 
 # certs
-certs
+.certs
