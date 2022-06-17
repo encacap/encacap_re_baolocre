@@ -4,6 +4,9 @@ const MostViewedInMonthSkeleton = () => {
     return (
         <div>
             <MostViewedInMonthSkeletonItem />
+            <MostViewedInMonthSkeletonItem />
+            <MostViewedInMonthSkeletonItem />
+            <MostViewedInMonthSkeletonItem />
         </div>
     );
 };
