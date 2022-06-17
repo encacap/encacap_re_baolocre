@@ -20,7 +20,9 @@ const EstateListSection = () => (
             <EstateVertical title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
             <EstateVertical title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
         </div>
-        <ViewMoreButton href="/bat-dong-san-ban" text="Xem thêm 4 bất động sản khác" />
+        <div className="px-4">
+            <ViewMoreButton href="/bat-dong-san-ban" text="Xem thêm 4 bất động sản khác" />
+        </div>
     </section>
 );
 
