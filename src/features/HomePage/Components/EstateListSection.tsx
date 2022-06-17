@@ -1,5 +1,5 @@
 import EstateVertical from "../../../common/Estate/EstateVertical";
-import ChevronRightIcon from "../../../common/Icons/ChevronRightIcon";
+import ViewMoreButton from "./ViewMoreButton";
 
 const EstateListSection = () => (
     <section className="py-10 border-t-2 border-b-2 border-gray-100 md:border-t-0 md:border-b-0 md:px-4 lg:px-10 xl:px-48 md:py-20 md:bg-gray-100">
@@ -20,15 +20,7 @@ const EstateListSection = () => (
             <EstateVertical title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
             <EstateVertical title="ĐẤT VƯỜN XÃ LỘC NGA TP BẢO LỘC, NGAY RESORT ĐÔI DÉP" />
         </div>
-        <div className="flex justify-center mx-4 mt-6 md:mt-10 md:mx-0">
-            <a
-                href="/bat-dong-san-ban"
-                className="flex items-center justify-center w-full py-3 pl-6 pr-4 font-semibold duration-200 bg-white border-2 border-gray-300 rounded-lg md:w-fit md:rounded-full hover:border-encacap-main hover:text-encacap-main"
-            >
-                Xem thêm 4 bất động sản khác
-                <ChevronRightIcon className="w-5 ml-2" />
-            </a>
-        </div>
+        <ViewMoreButton href="/bat-dong-san-ban" text="Xem thêm 4 bất động sản khác" />
     </section>
 );
 
