@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { CategoryItemProps } from "../../types/commonProps";
 
@@ -9,7 +10,13 @@ const CategoryItem = ({ name, url, image, ...otherProps }: CategoryItemProps) =>
                 {...otherProps}
             >
                 <div className="w-16 h-16 overflow-hidden border-2 border-gray-200 rounded-full md:mt-4">
-                    <img src={image} alt={name} className="object-cover object-center w-full h-full" />
+                    <Image
+                        width={64}
+                        height={64}
+                        src={image}
+                        alt={name}
+                        className="object-cover object-center w-full h-full"
+                    />
                 </div>
                 <div className="flex flex-col justify-center flex-1 px-1 mt-4 mb-1 text-center">
                     <div className="font-semibold">{name}</div>

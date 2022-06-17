@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import LocationIcon from "../../../Icons/LocationIcon";
 import PhoneRingIcon from "../../../Icons/PhoneRingIcon";
@@ -15,11 +16,9 @@ const Footer = ({ color }: FooterProps) => {
             <div className="lg:flex">
                 <div className="flex items-center justify-between">
                     <a href="/" className="flex items-center header-logo">
-                        <img
-                            src="/images/logo.jpg"
-                            alt="Encacap Estate Logo"
-                            className="w-12 border-2 rounded-lg border-encacap-main"
-                        />
+                        <div className="w-12 h-12 overflow-hidden border-2 rounded-lg border-encacap-main">
+                            <Image width={48} height={48} src="/images/logo.jpg" alt="Encacap Estate Logo" />
+                        </div>
                         <div className="ml-4 uppercase header-logo-text">
                             <div className="mt-1 ml-0.5 text-xs font-semibold">BĐS nghỉ dưỡng</div>
                             <div className="text-2xl font-bold text-encacap-main">Bảo Lộc</div>
