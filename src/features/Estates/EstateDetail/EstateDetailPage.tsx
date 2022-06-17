@@ -9,6 +9,7 @@ import ContactInformation from "./Components/ContactInfo";
 import EstateDescription from "./Components/EstateDescription";
 import EstateImageSlider from "./Components/EstateImageSlider/EstateImageSlider";
 import EstateProperties from "./Components/EstateProperties";
+import RandomNewsList from "./Components/RandomNewsList";
 import SameDistrictEstates from "./Components/SameDistrictEstates";
 import SocialShareButtons from "./Components/SocialShareButtons/SocialShareButtons";
 import SuggestionEstates from "./Components/SuggestionEstates";
@@ -59,6 +60,7 @@ const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
                     </div>
                     <SameDistrictEstates />
                     <SuggestionEstates />
+                    <RandomNewsList />
                 </ContentWrapperBody>
                 <ContentWrapperAside>
                     <EstateSearch className="shadow-md shadow-gray-100" />

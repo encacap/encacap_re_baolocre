@@ -3,7 +3,10 @@ import ClockIcon from "../Icons/ClockIcon";
 
 const NewsVertical = () => {
     return (
-        <a href="<%- newsItem.url %>" className="pb-4 duration-100 border-b-2 border-gray-100 hover:text-encacap-main">
+        <a
+            href="<%- newsItem.url %>"
+            className="pb-4 duration-100 border-b-2 border-gray-100 hover:text-encacap-main last:border-b-0"
+        >
             <div className="flex">
                 <div className="relative flex-shrink-0 w-20 h-20 overflow-hidden bg-gray-100 rounded-md md:w-24 md:h-24">
                     <Image
