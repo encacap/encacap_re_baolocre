@@ -63,8 +63,8 @@ const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
                     <RandomNewsList />
                 </ContentWrapperBody>
                 <ContentWrapperAside>
-                    <EstateSearch className="shadow-md shadow-gray-100" />
-                    <ContactInformation className="mt-5 shadow-md shadow-gray-100" />
+                    <EstateSearch />
+                    <ContactInformation className="mt-5" />
                     <FilterByRegion />
                 </ContentWrapperAside>
             </ContentWrapper>
