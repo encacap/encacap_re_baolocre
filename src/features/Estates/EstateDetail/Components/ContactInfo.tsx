@@ -7,7 +7,7 @@ const ContactInformation = ({ className }: React.HTMLAttributes<HTMLElement>) =>
     return (
         <div
             className={twMerge(
-                "flex flex-col items-center p-6 border-2 border-b-2 border-gray-100 rounded-lg",
+                "flex flex-col items-center p-6 border-2 border-b-2 border-gray-100 rounded-lg lg:shadow-md lg:shadow-gray-100",
                 className
             )}
         >

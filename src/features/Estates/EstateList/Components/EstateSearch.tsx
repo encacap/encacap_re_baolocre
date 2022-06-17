@@ -4,7 +4,7 @@ import SearchIcon from "../../../../common/Icons/SearchIcon";
 const EstateSearch = ({ className }: React.HTMLAttributes<HTMLElement>) => {
     return (
         <form
-            className={twMerge("relative block", className)}
+            className={twMerge("relative block lg:shadow-md lg:shadow-gray-100", className)}
             name="estateSearch"
             action="/bat-dong-san-ban"
             method="GET"

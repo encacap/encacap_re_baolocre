@@ -18,3 +18,8 @@ export interface NewsListPageProps {
     head: HTMLHeadType;
     categories: CategoryType[];
 }
+
+export interface NewsDetailPageProps {
+    head: HTMLHeadType;
+    categories: CategoryType[];
+}

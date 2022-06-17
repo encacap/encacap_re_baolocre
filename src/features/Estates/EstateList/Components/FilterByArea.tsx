@@ -2,7 +2,7 @@ import AsideFilterItem from "./FilterByAreaItem";
 
 const FilterByArea = () => {
     return (
-        <div className="px-5 py-4 border-2 border-gray-100 rounded-md">
+        <div className="px-5 py-4 border-2 border-gray-100 rounded-md shadow-md shadow-gray-100">
             <div className="pb-4 font-semibold border-b-2 border-gray-100">Lọc theo diện tích</div>
             <div className="mt-3">
                 <AsideFilterItem href="/real_estate_detail.html">
