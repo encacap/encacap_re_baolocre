@@ -11,14 +11,14 @@ interface MostViewedInMonthItemProps {
 
 const MostViewedInMonthItem = ({ href, title, image, className }: MostViewedInMonthItemProps) => {
     return (
-        <Link href={href}>
+        <Link href={href} passHref>
             <a
                 className={twMerge(
-                    "py-1 duration-200 hover:text-encacap-main flex border-b-2 border-gray-100 pb-5 mt-2 first:mt-0 last:border-b-0 last:pb-2",
+                    "py-4 duration-200 hover:text-encacap-main flex border-b-2 border-gray-100 first:mt-0 last:border-b-0",
                     className
                 )}
             >
-                <div className="flex-shrink-0 w-10 h-10 mt-1.5 mr-4 overflow-hidden rounded-lg">
+                <div className="flex-shrink-0 w-10 h-10 mt-1 mr-4 overflow-hidden rounded-lg">
                     <Image
                         width={40}
                         height={40}
@@ -28,11 +28,6 @@ const MostViewedInMonthItem = ({ href, title, image, className }: MostViewedInMo
                     />
                 </div>
                 {title && title}
-                {!title && (
-                    <div className="w-full mt-1.5">
-                        <div className="w-full h-3 bg-gray-100 rounded-full animate-pulse" />
-                    </div>
-                )}
             </a>
         </Link>
     );
