@@ -28,34 +28,38 @@ const EstateHorizontal = ({
     return (
         <div className="w-full mb-4 overflow-hidden duration-200 group md:flex md:mt-4 md:mb-0 md:rounded-md hover:text-encacap-main md:hover:shadow-gray-100 md:hover:shadow-lg">
             {special && (
-                <Link href={to}>
-                    <div className="relative flex items-center w-full bg-black rounded-lg aspect-video md:hidden">
-                        <Image
-                            src={thumbnail || "/images/no-image.png"}
-                            alt={title}
-                            className="relative z-0 object-cover object-center w-full rounded-md aspect-video md:rounded-none"
-                            layout="fill"
-                            quality={1}
-                            priority={priority}
-                        />
-                        <div className="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center text-white duration-200 hover:text-red-500">
-                            <YoutubeIcon className="w-12" />
+                <Link href={to} passHref>
+                    <a className="block">
+                        <div className="relative flex items-center w-full bg-black rounded-lg aspect-video md:hidden">
+                            <Image
+                                src={thumbnail || "/images/no-image.png"}
+                                alt={title}
+                                className="relative z-0 object-cover object-center w-full rounded-md aspect-video md:rounded-none"
+                                layout="fill"
+                                quality={1}
+                                priority={priority}
+                            />
+                            <div className="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center text-white duration-200 hover:text-red-500">
+                                <YoutubeIcon className="w-12" />
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </Link>
             )}
-            <Link href={to}>
-                <div
-                    className={twMerge(
-                        "block py-3 font-semibold uppercase md:hidden text-encacap-main",
-                        special && "pb-0"
-                    )}
-                >
-                    {title}
-                </div>
+            <Link href={to} passHref>
+                <a className="block">
+                    <div
+                        className={twMerge(
+                            "block py-3 font-semibold uppercase md:hidden text-encacap-main",
+                            special && "pb-0"
+                        )}
+                    >
+                        {title}
+                    </div>
+                </a>
             </Link>
             <div className="flex w-full">
-                <Link href={to}>
+                <Link href={to} passHref>
                     <a
                         className={twMerge(
                             "relative w-28 md:w-64 h-28 md:h-auto rounded-lg overflow-hidden flex items-center bg-gray-100 md:rounded-none",
@@ -92,7 +96,7 @@ const EstateHorizontal = ({
                         special && "pl-0"
                     )}
                 >
-                    <Link href={to}>
+                    <Link href={to} passHref>
                         <a className="flex flex-col flex-1">
                             <div className="hidden font-semibold uppercase md:block text-encacap-main">{title}</div>
                             <div className="py-1 font-semibold md:py-2">
