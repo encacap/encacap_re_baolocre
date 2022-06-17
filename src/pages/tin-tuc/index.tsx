@@ -4,9 +4,9 @@ import { NewsListPageProps } from "../../types/pageProps";
 
 const Home = (props: NewsListPageProps) => <NewsListPage {...props} />;
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = () => {
     const head = { title: "Danh sách tin túc mới nhất" };
-    return { props: { head, categories: newsCategories } };
+    return Promise.resolve({ props: { head, categories: newsCategories } });
 };
 
 export default Home;

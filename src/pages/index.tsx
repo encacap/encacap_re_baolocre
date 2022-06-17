@@ -3,9 +3,9 @@ import { HomePageProps } from "../types/pageProps";
 
 const Home = (props: HomePageProps) => <HomePage {...props} />;
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = () => {
     const head = { title: "Trang chủ" };
-    return { props: { head } };
+    return Promise.resolve({ props: { head } });
 };
 
 export default Home;
