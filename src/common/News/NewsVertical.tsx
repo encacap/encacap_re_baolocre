@@ -1,11 +1,13 @@
+import Image from "next/image";
 import ClockIcon from "../Icons/ClockIcon";
 
 const NewsVertical = () => {
     return (
         <a href="<%- newsItem.url %>" className="pb-4 duration-100 border-b-2 border-gray-100 hover:text-encacap-main">
             <div className="flex">
-                <div className="flex-shrink-0 w-20 h-20 overflow-hidden bg-gray-100 rounded-md md:w-24 md:h-24">
-                    <img
+                <div className="relative flex-shrink-0 w-20 h-20 overflow-hidden bg-gray-100 rounded-md md:w-24 md:h-24">
+                    <Image
+                        layout="fill"
                         src="https://res.cloudinary.com/baolocre-estatesone/image/upload/c_thumb,g_center,w_300/v1649743800/baolocre_news/mfdolis3z8ljqapzz43x.jpg"
                         alt="<%- newsItem.title %>"
                         className="object-cover object-center w-full h-full rounded-md"

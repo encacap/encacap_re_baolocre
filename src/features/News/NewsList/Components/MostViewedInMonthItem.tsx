@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
@@ -18,7 +19,13 @@ const MostViewedInMonthItem = ({ href, title, image, className }: MostViewedInMo
                 )}
             >
                 <div className="flex-shrink-0 w-10 h-10 mt-1.5 mr-4 overflow-hidden rounded-lg">
-                    <img src={image} alt="News" className="object-cover object-center w-full h-full" />
+                    <Image
+                        width={40}
+                        height={40}
+                        src={image}
+                        alt="News"
+                        className="object-cover object-center w-full h-full"
+                    />
                 </div>
                 {title && title}
                 {!title && (

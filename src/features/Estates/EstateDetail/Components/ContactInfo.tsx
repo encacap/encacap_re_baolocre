@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import PhoneRingIcon from "../../../../common/Icons/PhoneRingIcon";
 import ZaloIcon from "../../../../common/Icons/ZaloTextIcon";
@@ -11,7 +12,9 @@ const ContactInformation = ({ className }: React.HTMLAttributes<HTMLElement>) =>
             )}
         >
             <div className="flex-shrink-0 w-24 h-24 overflow-hidden border-4 border-gray-200 rounded-full">
-                <img
+                <Image
+                    width={96}
+                    height={96}
                     src="https://res.cloudinary.com/baolocre-estatesone/image/upload/c_thumb,g_center,w_300/v1648445896/baolocre_estate/pv6wide7sq11dtl82zk4.jpg"
                     alt="<%= contact.name %>"
                     className="object-cover object-center w-full h-full"
