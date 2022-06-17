@@ -2,11 +2,11 @@ import Breadcrumb from "../../../common/Breadcrumb/Breadcrumb";
 import ClockIcon from "../../../common/Icons/ClockIcon";
 import { ContentWrapper, ContentWrapperAside, ContentWrapperBody, PageLayout } from "../../../common/Layout";
 import { NewsDetailPageProps } from "../../../types/pageProps";
-import RandomNewsList from "../../Estates/EstateDetail/Components/RandomNewsList";
 import SuggestionEstates from "../../Estates/EstateDetail/Components/SuggestionEstates";
 import MostViewedInMonth from "../Components/MostViewedInMonth/MostViewedInMonth";
 import NewsContentHeader from "../Components/NewsContentHeader";
 import NewsSearch from "../Components/NewsSearch";
+import RandomNewsList from "../Components/RandomNewsList";
 
 const NewsDetailPage = ({ head, categories }: NewsDetailPageProps) => {
     return (

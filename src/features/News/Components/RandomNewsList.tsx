@@ -1,4 +1,4 @@
-import NewsList from "../../../News/NewsList/Components/NewsList";
+import NewsList from "../NewsList/Components/NewsList";
 
 const RandomNewsList = () => {
     return (
