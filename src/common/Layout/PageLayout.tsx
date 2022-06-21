@@ -1,16 +1,17 @@
+import { HTMLHeadType } from "../../types/commonTypes";
 import CustomHead from "../CustomHead/CustomHead";
 import Footer from "./Components/Footer/Footer";
 import Header, { HeaderProps } from "./Components/Header/Header";
 
 interface LayoutProps extends HeaderProps {
     children: React.ReactNode;
-    title?: string;
+    head?: HTMLHeadType;
     footerColor?: "light" | "dark";
 }
 
-const PageLayout = ({ children, title = "Trang chủ", footerColor = "light", isHideMobileNavbar }: LayoutProps) => (
+const PageLayout = ({ children, head, footerColor = "light", isHideMobileNavbar }: LayoutProps) => (
     <>
-        <CustomHead title={title} />
+        <CustomHead head={head} />
         <Header isHideMobileNavbar={isHideMobileNavbar} />
         {children}
         <Footer color={footerColor} />

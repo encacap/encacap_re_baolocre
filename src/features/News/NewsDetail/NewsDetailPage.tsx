@@ -10,7 +10,7 @@ import RandomNewsList from "../Components/RandomNewsList";
 
 const NewsDetailPage = ({ head, categories }: NewsDetailPageProps) => {
     return (
-        <PageLayout title={head.title} footerColor="dark">
+        <PageLayout head={head} footerColor="dark">
             <ContentWrapper>
                 <ContentWrapperBody>
                     <NewsContentHeader categories={categories} />

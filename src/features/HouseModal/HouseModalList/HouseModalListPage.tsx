@@ -8,7 +8,7 @@ import HouseModalContentHeader from "../Components/HouseModalContentHeader";
 
 const HouseModalListPage = ({ head, categories }: NewsListPageProps) => {
     return (
-        <PageLayout title={head.title} footerColor="dark">
+        <PageLayout head={head} footerColor="dark">
             <ContentWrapper>
                 <ContentWrapperBody>
                     <HouseModalContentHeader categories={categories} />

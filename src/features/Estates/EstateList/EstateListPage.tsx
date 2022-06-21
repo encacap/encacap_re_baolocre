@@ -11,7 +11,7 @@ import FilterByRegion from "./Components/FilterByRegion";
 
 const EstateListPage = ({ head, categories }: EstateListPageProps) => {
     return (
-        <PageLayout title={head.title} footerColor="dark">
+        <PageLayout head={head} footerColor="dark">
             <ContentWrapper>
                 <ContentWrapperBody>
                     <EstateContentHeader categories={categories} />
