@@ -41,3 +41,12 @@ export const newsCategories: CategoryType[] = [
         image: "/images/categories/phan-tich-thi-truong.jfif",
     },
 ];
+
+export const houseModalCategories: CategoryType[] = [
+    {
+        categoryId: 1,
+        name: "Nhà cấp 4",
+        url: "/thu-vien-nha-mau/nha-cap-4",
+        image: "/images/categories/thong-tin-quy-hoach.jfif",
+    },
+];
