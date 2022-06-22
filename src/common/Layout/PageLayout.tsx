@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
-import { getContactInformation } from "../../services/configService";
+import _ from "lodash";
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { getContactInformation } from "../../slices/layoutSlice";
 import { HTMLHeadType } from "../../types/commonTypes";
-import { ContactInformationType } from "../../types/dataTypes";
 import CustomHead from "../CustomHead/CustomHead";
 import Footer from "./Components/Footer/Footer";
 import Header, { HeaderProps } from "./Components/Header/Header";
@@ -13,11 +14,14 @@ interface LayoutProps extends HeaderProps {
 }
 
 const PageLayout = ({ children, head, footerColor = "light", isHideMobileNavbar }: LayoutProps) => {
-    const [contactInformation, setContactInformation] = useState<ContactInformationType>();
+    const contactInformation = useAppSelector((state) => state.layout.contactInformation);
+    const dispatch = useAppDispatch();
 
     useEffect(() => {
-        getContactInformation().then(setContactInformation);
-    }, []);
+        if (_.isEmpty(contactInformation)) {
+            dispatch(getContactInformation());
+        }
+    }, [contactInformation]);
 
     return (
         <>
