@@ -10,7 +10,7 @@ import NewsList from "./Components/NewsList";
 
 const NewsListPage = ({ head, categories }: NewsListPageProps) => {
     return (
-        <PageLayout title={head.title} footerColor="dark">
+        <PageLayout head={head} footerColor="dark">
             <ContentWrapper>
                 <ContentWrapperBody>
                     <NewsContentHeader categories={categories} />

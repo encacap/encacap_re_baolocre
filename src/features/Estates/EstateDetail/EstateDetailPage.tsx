@@ -16,7 +16,7 @@ import SuggestionEstates from "./Components/SuggestionEstates";
 
 const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
     return (
-        <PageLayout title={head.title} footerColor="dark">
+        <PageLayout head={head} footerColor="dark">
             <ContentWrapper>
                 <ContentWrapperBody>
                     <EstateContentHeader categories={categories} />
