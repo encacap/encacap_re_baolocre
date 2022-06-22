@@ -1,16 +1,17 @@
 import dayjs from "dayjs";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
+import { ContactInformationType } from "../../../../types/dataTypes";
 import LocationIcon from "../../../Icons/LocationIcon";
 import PhoneRingIcon from "../../../Icons/PhoneRingIcon";
-import WrappedFacebookIcon from "../WrappedFacebookIcon";
-import WrappedYoutubeIcon from "../WrappedYoutubeIcon";
+import SocialItems from "../Header/SocialItems";
 
 interface FooterProps {
     color: "light" | "dark";
+    contactInformation: ContactInformationType;
 }
 
-const Footer = ({ color }: FooterProps) => {
+const Footer = ({ contactInformation, color }: FooterProps) => {
     return (
         <footer className={twMerge("px-4 pt-4 lg:px-10 lg:pt-10 lg:bg-none", color === "dark" && "bg-gray-100")}>
             <div className="lg:flex">
@@ -24,12 +25,7 @@ const Footer = ({ color }: FooterProps) => {
                             <div className="text-2xl font-bold text-encacap-main">Bảo Lộc</div>
                         </div>
                     </a>
-                    <div>
-                        <div className="flex lg:hidden">
-                            <WrappedYoutubeIcon href="https://www.facebook.com/encacap" />
-                            <WrappedFacebookIcon href="https://www.facebook.com/encacap" />
-                        </div>
-                    </div>
+                    <SocialItems className="flex lg:hidden" contactInformation={contactInformation} />
                 </div>
                 <div className="block lg:hidden w-full h-0.5 bg-gray-200 mt-4" />
                 <div className="items-center justify-end flex-1 mt-4 lg:flex lg:mt-0">
@@ -51,12 +47,10 @@ const Footer = ({ color }: FooterProps) => {
                             <div className="font-semibold">28 Tô Hiệu, Phường Lộc Sơn, TP Bảo Lộc, Tỉnh Lâm Đồng</div>
                         </div>
                     </div>
-                    <div className="hidden lg:flex">
-                        <div className="flex items-center lg:ml-16">
-                            <WrappedYoutubeIcon href="https://www.facebook.com/encacap" />
-                            <WrappedFacebookIcon href="https://www.facebook.com/encacap" />
-                        </div>
-                    </div>
+                    <SocialItems
+                        className="items-center hidden lg:flex lg:ml-16"
+                        contactInformation={contactInformation}
+                    />
                 </div>
             </div>
             <div className="py-4 mt-4 text-center border-t-2 lg:mt-10">
