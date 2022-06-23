@@ -6,8 +6,6 @@ const HouseModalItem = () => {
             <div className="relative w-full aspect-video">
                 <Image
                     src="https://res.cloudinary.com/baolocre-estatesone/image/upload/c_thumb,g_center,w_300/v1647420564/baolocre_news/ur0hkfzwhv3issd4u4vb.jpg"
-                    width={260}
-                    height={180}
                     layout="fill"
                     className="object-cover object-center w-full h-full duration-150 group-hover:scale-110"
                     alt="House Modal"
