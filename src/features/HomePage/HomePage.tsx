@@ -7,9 +7,9 @@ import NewsSection from "./Components/NewsSection";
 import SearchSection from "./Components/SearchSection";
 import SliderSection from "./Components/SliderSection";
 
-const HomePage = ({ head }: HomePageProps) => (
+const HomePage = ({ head, sliderImages }: HomePageProps) => (
     <PageLayout head={head} footerColor="dark" isHideMobileNavbar>
-        <SliderSection />
+        <SliderSection images={sliderImages} />
         <SearchSection />
         <CategorySection />
         <EstateListSection />

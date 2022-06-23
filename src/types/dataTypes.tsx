@@ -4,3 +4,8 @@ export interface ContactInformationType {
     phoneNumber: string;
     contactAddress: string;
 }
+
+export interface HomepageSliderType {
+    id: string;
+    image: string;
+}
