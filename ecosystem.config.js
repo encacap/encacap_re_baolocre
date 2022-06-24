@@ -1,7 +1,7 @@
 module.exports = {
     apps: [
         {
-            name: "baolocre_dev",
+            name: "baolocre_fe_dev",
             script: "yarn",
             args: "start",
             env: {
