@@ -35,7 +35,7 @@ jobs:
                   script: |
                       eval `ssh-agent`
                       ssh-add ~/.ssh/github
-                      cd baolocre_fe_beta
+                      cd baolocre_fe_dev
                       git pull origin master
                       yarn install
                       yarn build
