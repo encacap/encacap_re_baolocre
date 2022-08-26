@@ -2,10 +2,11 @@
 import Image from "next/image";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { HomepageSliderType } from "../../../types/dataTypes";
+import { ImageDataType } from "../../../types/dataTypes";
+import { getImageURLFromImage } from "../../../utils/upload";
 
 interface SliderSectionProps {
-    images: HomepageSliderType[];
+    images: ImageDataType[];
 }
 
 const SliderSection = ({ images }: SliderSectionProps) => {
@@ -22,7 +23,7 @@ const SliderSection = ({ images }: SliderSectionProps) => {
             {images.map((image, index) => (
                 <SwiperSlide key={image.id} className="relative">
                     <Image
-                        src={image.image}
+                        src={getImageURLFromImage(image, "public")}
                         alt={process.env.NEXT_PUBLIC_WEBSITE_NAME}
                         layout="fill"
                         className="object-cover object-center"

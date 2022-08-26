@@ -1,9 +1,9 @@
 import { CategoryType, HTMLHeadType } from "./commonTypes";
-import { HomepageSliderType } from "./dataTypes";
+import { ImageDataType } from "./dataTypes";
 
 export interface HomePageProps {
     head: HTMLHeadType;
-    sliderImages: HomepageSliderType[];
+    sliderImages: ImageDataType[];
 }
 
 export interface EstateListPageProps {

@@ -5,7 +5,11 @@ export interface ContactInformationType {
     contactAddress: string;
 }
 
-export interface HomepageSliderType {
+export interface ImageVariantDataType {
+    [key: string]: string;
+}
+
+export interface ImageDataType {
     id: string;
-    image: string;
+    variants: string[];
 }

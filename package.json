@@ -3,9 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "cross-env NODE_ENV=development SERVER_HOSTNAME=baolocre.dev SERVER_PORT=22401 node ./server.js",
+        "dev": "cross-env HOST=baolocre.encacap.dev PORT=22402 CERTS=./.certs node ./server.js",
         "build": "next build",
-        "start": "cross-env NODE_ENV=production SERVER_PORT=22401 node ./server.js",
+        "start": "cross-env NODE_ENV=production node ./server.js",
         "lint": "eslint . --fix"
     },
     "dependencies": {

@@ -15,7 +15,7 @@ const getContactInformation = async (): Promise<ContactInformationType> => {
  * @returns {Promise<string[]>} - Homepage slider images
  */
 const getHomepageSliderImages = async (): Promise<string[]> => {
-    const response = await axiosInstance.get("configs/homepage-slider");
+    const response = await axiosInstance.get("configs/homepage-hero-images");
     return response.data.data;
 };
 
