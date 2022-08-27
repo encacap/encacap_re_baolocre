@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import { ContactInformationType } from "../../../../types/dataTypes";
+import { friendlyPhoneNumber } from "../../../../utils/string";
 import LocationIcon from "../../../Icons/LocationIcon";
 import PhoneRingIcon from "../../../Icons/PhoneRingIcon";
 import SocialItems from "../Header/SocialItems";
@@ -35,7 +36,7 @@ const Footer = ({ contactInformation, color }: FooterProps) => {
             </div>
             <div>
               <div className="text-sm">Điện thoại</div>
-              <div className="font-semibold">0582 419 433</div>
+              <div className="font-semibold">{friendlyPhoneNumber(contactInformation.phoneNumber)}</div>
             </div>
           </div>
           <div className="flex items-center mt-3 lg:mt-0 lg:ml-16">
@@ -44,7 +45,7 @@ const Footer = ({ contactInformation, color }: FooterProps) => {
             </div>
             <div>
               <div className="text-sm">Địa chỉ</div>
-              <div className="font-semibold">28 Tô Hiệu, Phường Lộc Sơn, TP Bảo Lộc, Tỉnh Lâm Đồng</div>
+              <div className="font-semibold">{contactInformation.address}</div>
             </div>
           </div>
           <SocialItems

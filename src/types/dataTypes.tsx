@@ -2,7 +2,7 @@ export interface ContactInformationType {
   facebook: string;
   youtube: string;
   phoneNumber: string;
-  contactAddress: string;
+  address: string;
 }
 
 export interface ImageVariantDataType {

@@ -1,27 +1,26 @@
 import { CategoryType, HTMLHeadType } from "./commonTypes";
 import { ImageDataType } from "./dataTypes";
 
-export interface HomePageProps {
+export interface CommonPageProps {
   head: HTMLHeadType;
+}
+
+export interface HomePageProps extends CommonPageProps {
   sliderImages: ImageDataType[];
 }
 
-export interface EstateListPageProps {
-  head: HTMLHeadType;
+export interface EstateListPageProps extends CommonPageProps {
   categories: CategoryType[];
 }
 
-export interface EstateDetailPageProps {
-  head: HTMLHeadType;
+export interface EstateDetailPageProps extends CommonPageProps {
   categories: CategoryType[];
 }
 
-export interface NewsListPageProps {
-  head: HTMLHeadType;
+export interface NewsListPageProps extends CommonPageProps {
   categories: CategoryType[];
 }
 
-export interface NewsDetailPageProps {
-  head: HTMLHeadType;
+export interface NewsDetailPageProps extends CommonPageProps {
   categories: CategoryType[];
 }
