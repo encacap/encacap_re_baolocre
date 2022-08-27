@@ -6,8 +6,8 @@ import axiosInstance from "../utils/axiosInstance";
  * @returns {Promise<ContactInformationType>}
  */
 const getContactInformation = async (): Promise<ContactInformationType> => {
-    const response = await axiosInstance.get("configs/contact");
-    return response.data.data;
+  const response = await axiosInstance.get("configs/contact");
+  return response.data.data;
 };
 
 /**
@@ -15,8 +15,8 @@ const getContactInformation = async (): Promise<ContactInformationType> => {
  * @returns {Promise<string[]>} - Homepage slider images
  */
 const getHomepageSliderImages = async (): Promise<string[]> => {
-    const response = await axiosInstance.get("configs/homepage-hero-images");
-    return response.data.data;
+  const response = await axiosInstance.get("configs/homepage-hero-images");
+  return response.data.data;
 };
 
 export { getContactInformation, getHomepageSliderImages };

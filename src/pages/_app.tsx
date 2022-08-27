@@ -4,11 +4,11 @@ import { store } from "../app/store";
 import "../styles/globals.scss";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-    return (
-        <Provider store={store}>
-            <Component {...pageProps} />
-        </Provider>
-    );
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  );
 };
 
 export default MyApp;

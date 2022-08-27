@@ -8,14 +8,14 @@ import SearchSection from "./Components/SearchSection";
 import SliderSection from "./Components/SliderSection";
 
 const HomePage = ({ head, sliderImages }: HomePageProps) => (
-    <PageLayout head={head} footerColor="dark" isHideMobileNavbar>
-        <SliderSection images={sliderImages} />
-        <SearchSection />
-        <CategorySection />
-        <EstateListSection />
-        <NewsSection />
-        <HouseModelSection />
-    </PageLayout>
+  <PageLayout head={head} footerColor="dark" isHideMobileNavbar>
+    <SliderSection images={sliderImages} />
+    <SearchSection />
+    <CategorySection />
+    <EstateListSection />
+    <NewsSection />
+    <HouseModelSection />
+  </PageLayout>
 );
 
 export default HomePage;
