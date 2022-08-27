@@ -30,24 +30,28 @@ const Footer = ({ contactInformation, color }: FooterProps) => {
         </div>
         <div className="block lg:hidden w-full h-0.5 bg-gray-200 mt-4" />
         <div className="items-center justify-end flex-1 mt-4 lg:flex lg:mt-0">
-          <div className="flex items-center">
-            <div className="flex-shrink-0 w-12 mr-4 lg:w-auto lg:mr-6">
-              <PhoneRingIcon className="w-6 mx-auto lg:w-9" />
+          {contactInformation?.phoneNumber && (
+            <div className="flex items-center">
+              <div className="flex-shrink-0 w-12 mr-4 lg:w-auto lg:mr-6">
+                <PhoneRingIcon className="w-6 mx-auto lg:w-9" />
+              </div>
+              <div>
+                <div className="text-sm">Điện thoại</div>
+                <div className="font-semibold">{friendlyPhoneNumber(contactInformation?.phoneNumber)}</div>
+              </div>
             </div>
-            <div>
-              <div className="text-sm">Điện thoại</div>
-              <div className="font-semibold">{friendlyPhoneNumber(contactInformation.phoneNumber)}</div>
+          )}
+          {contactInformation?.address && (
+            <div className="flex items-center mt-3 lg:mt-0 lg:ml-16">
+              <div className="flex-shrink-0 w-12 mr-4 lg:w-auto lg:mr-6">
+                <LocationIcon className="mx-auto w-7 lg:w-10" />
+              </div>
+              <div>
+                <div className="text-sm">Địa chỉ</div>
+                <div className="font-semibold">{contactInformation?.address}</div>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center mt-3 lg:mt-0 lg:ml-16">
-            <div className="flex-shrink-0 w-12 mr-4 lg:w-auto lg:mr-6">
-              <LocationIcon className="mx-auto w-7 lg:w-10" />
-            </div>
-            <div>
-              <div className="text-sm">Địa chỉ</div>
-              <div className="font-semibold">{contactInformation.address}</div>
-            </div>
-          </div>
+          )}
           <SocialItems
             className="items-center hidden lg:flex lg:ml-16"
             contactInformation={contactInformation}

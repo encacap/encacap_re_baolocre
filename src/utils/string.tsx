@@ -1,4 +1,7 @@
 const friendlyPhoneNumber = (phoneNumber: string) => {
+  if (!phoneNumber) {
+    return "";
+  }
   const cleanedPhoneNumber = phoneNumber.replace(/\D/g, "");
   const match = cleanedPhoneNumber.match(/^(\d{4})(\d{3})(\d{3})$/);
   if (match) {
