@@ -1,17 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
-    webpack(config) {
-        config.module.rules.push({
-            test: /\.svg$/,
-            use: ["@svgr/webpack"],
-        });
+  reactStrictMode: true,
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
 
-        return config;
-    },
-    images: {
-        domains: ["res.cloudinary.com", "imagedelivery.net"],
-    },
+    return config;
+  },
+  images: {
+    domains: ["res.cloudinary.com", "imagedelivery.net"],
+  },
 };
 
 module.exports = nextConfig;

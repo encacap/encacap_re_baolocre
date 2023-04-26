@@ -1,4 +1,3 @@
-/* eslint-disable security/detect-non-literal-fs-filename */
 const fs = require("fs");
 const { createServer: createSSLServer } = require("https");
 const { createServer: createNormalServer } = require("http");
@@ -16,44 +15,44 @@ const keyFile = `${certFolder}/encacap.com.key`;
 const crtFilePath = `${certFolder}/encacap.com.crt`;
 
 const startSSLServer = () => {
-    const options = {
-        key: fs.readFileSync(keyFile),
-        cert: fs.readFileSync(crtFilePath),
-    };
+  const options = {
+    key: fs.readFileSync(keyFile),
+    cert: fs.readFileSync(crtFilePath),
+  };
 
-    app.prepare().then(() => {
-        createSSLServer(options, handler).listen(
-            {
-                host: HOSTNAME,
-                port: PORT,
-            },
-            () => {
-                // eslint-disable-next-line no-console
-                console.log(`> Ready on https://${HOSTNAME}:${PORT}`);
-            }
-        );
-    });
+  app.prepare().then(() => {
+    createSSLServer(options, handler).listen(
+      {
+        host: HOSTNAME,
+        port: PORT,
+      },
+      () => {
+        // eslint-disable-next-line no-console
+        console.log(`> Ready on https://${HOSTNAME}:${PORT}`);
+      }
+    );
+  });
 };
 
 const startNormalServer = () => {
-    app.prepare().then(() => {
-        createNormalServer(handler).listen(PORT, () => {
-            // eslint-disable-next-line no-console
-            console.log(`> Ready on http://localhost:${PORT}`);
-        });
+  app.prepare().then(() => {
+    createNormalServer(handler).listen(PORT, () => {
+      // eslint-disable-next-line no-console
+      console.log(`> Ready on http://localhost:${PORT}`);
     });
+  });
 };
 
 const startServer = () => {
-    if (isDevEnvironment) {
-        if (fs.existsSync(keyFile) && fs.existsSync(crtFilePath)) {
-            startSSLServer();
-            return;
-        }
-        startNormalServer();
-        return;
+  if (isDevEnvironment) {
+    if (fs.existsSync(keyFile) && fs.existsSync(crtFilePath)) {
+      startSSLServer();
+      return;
     }
     startNormalServer();
+    return;
+  }
+  startNormalServer();
 };
 
 // Start the server
