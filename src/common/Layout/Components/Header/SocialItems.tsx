@@ -5,21 +5,21 @@ import WrappedFacebookIcon from "../WrappedFacebookIcon";
 import WrappedYoutubeIcon from "../WrappedYoutubeIcon";
 
 interface SocialItemsProps {
-    contactInformation: ContactInformationType;
-    className?: string;
+  contactInformation: ContactInformationType;
+  className?: string;
 }
 
-const SocialItems = ({ contactInformation, className }: SocialItemsProps) => {
-    if (_.isEmpty(contactInformation?.facebook) && _.isEmpty(contactInformation?.youtube)) {
-        return null;
-    }
+function SocialItems({ contactInformation, className }: SocialItemsProps) {
+  if (_.isEmpty(contactInformation?.facebook) && _.isEmpty(contactInformation?.youtube)) {
+    return null;
+  }
 
-    return (
-        <div className={twMerge("hidden space-x-2 lg:flex", className)}>
-            {contactInformation?.facebook && <WrappedFacebookIcon href={contactInformation.facebook} />}
-            {contactInformation?.youtube && <WrappedYoutubeIcon href={contactInformation.youtube} />}
-        </div>
-    );
-};
+  return (
+    <div className={twMerge("hidden space-x-2 lg:flex", className)}>
+      {contactInformation?.facebook && <WrappedFacebookIcon href={contactInformation.facebook} />}
+      {contactInformation?.youtube && <WrappedYoutubeIcon href={contactInformation.youtube} />}
+    </div>
+  );
+}
 
 export default SocialItems;

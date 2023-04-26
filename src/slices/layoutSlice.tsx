@@ -4,34 +4,34 @@ import { configService } from "../services";
 import { ContactInformationType } from "../types/dataTypes";
 
 interface LayoutState {
-    contactInformation: ContactInformationType;
+  contactInformation: ContactInformationType;
 }
 
 const initialState: LayoutState = {
-    contactInformation: null,
+  contactInformation: null,
 };
 
 export const getContactInformation = createAsyncThunk("layout/getContactInformation", async () => {
-    const data = await configService.getContactInformation();
-    return data;
+  const data = await configService.getContactInformation();
+  return data;
 });
 
 export const layoutSlice = createSlice({
-    name: "layout",
-    initialState,
-    reducers: {
-        setContactInformation: (state: LayoutState, action: PayloadAction<ContactInformationType>) => {
-            state.contactInformation = action.payload;
-        },
+  name: "layout",
+  initialState,
+  reducers: {
+    setContactInformation: (state: LayoutState, action: PayloadAction<ContactInformationType>) => {
+      state.contactInformation = action.payload;
     },
-    extraReducers: (builder) => {
-        builder.addCase(getContactInformation.pending, (state) => {
-            state.contactInformation = null;
-        });
-        builder.addCase(getContactInformation.fulfilled, (state, action) => {
-            state.contactInformation = action.payload;
-        });
-    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(getContactInformation.pending, (state) => {
+      state.contactInformation = null;
+    });
+    builder.addCase(getContactInformation.fulfilled, (state, action) => {
+      state.contactInformation = action.payload;
+    });
+  },
 });
 
 const { actions, reducer: layoutReducer } = layoutSlice;
