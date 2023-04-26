@@ -9,7 +9,7 @@ import EstateSearch from "./Components/EstateSearch";
 import FilterByArea from "./Components/FilterByArea";
 import FilterByRegion from "./Components/FilterByRegion";
 
-function EstateListPage({ head, categories }: EstateListPageProps) {
+const EstateListPage = ({ head, categories }: EstateListPageProps) => {
   return (
     <PageLayout head={head} footerColor="dark">
       <ContentWrapper>
@@ -40,6 +40,6 @@ function EstateListPage({ head, categories }: EstateListPageProps) {
       </ContentWrapper>
     </PageLayout>
   );
-}
+};
 
 export default EstateListPage;

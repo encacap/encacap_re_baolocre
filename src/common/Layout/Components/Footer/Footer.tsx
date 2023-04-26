@@ -11,7 +11,7 @@ interface FooterProps {
   contactInformation: ContactInformationType;
 }
 
-function Footer({ contactInformation, color }: FooterProps) {
+const Footer = ({ contactInformation, color }: FooterProps) => {
   return (
     <footer className={twMerge("px-4 pt-4 lg:px-10 lg:pt-10 lg:bg-none", color === "dark" && "bg-gray-100")}>
       <div className="lg:flex">
@@ -61,6 +61,6 @@ function Footer({ contactInformation, color }: FooterProps) {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

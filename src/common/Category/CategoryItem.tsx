@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CategoryItemProps } from "../../types/commonProps";
 
-function CategoryItem({ name, url, image, ...otherProps }: CategoryItemProps) {
+const CategoryItem = ({ name, url, image, ...otherProps }: CategoryItemProps) => {
   return (
     <Link href={url}>
       <a
@@ -24,6 +24,6 @@ function CategoryItem({ name, url, image, ...otherProps }: CategoryItemProps) {
       </a>
     </Link>
   );
-}
+};
 
 export default CategoryItem;

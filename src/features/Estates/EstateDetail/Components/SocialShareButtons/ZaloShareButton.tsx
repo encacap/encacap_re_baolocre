@@ -1,7 +1,7 @@
 import Script from "next/script";
 import ZaloIcon from "../../../../../common/Icons/ZaloTextIcon";
 
-function ZaloShareButton() {
+const ZaloShareButton = () => {
   return (
     <>
       <div className="relative flex items-center justify-center px-4 py-2 font-semibold text-center text-white duration-200 border-2 rounded-md cursor-pointer border-encacap-zalo bg-encacap-zalo hover:bg-white hover:text-encacap-zalo">
@@ -23,6 +23,6 @@ function ZaloShareButton() {
       <Script src="https://sp.zalo.me/plugins/sdk.js" strategy="lazyOnload" />
     </>
   );
-}
+};
 
 export default ZaloShareButton;

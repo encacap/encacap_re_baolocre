@@ -1,7 +1,7 @@
 import NewsList from "./NewsList";
 import ViewMoreButton from "./ViewMoreButton";
 
-function NewsSection() {
+const NewsSection = () => {
   return (
     <section className="px-4 py-10 lg:px-10 xl:px-48 md:py-20">
       <div className="flex flex-col items-center">
@@ -15,6 +15,6 @@ function NewsSection() {
       <ViewMoreButton href="/tin-tuc" text="Xem thêm 4 tin tức khác" />
     </section>
   );
-}
+};
 
 export default NewsSection;

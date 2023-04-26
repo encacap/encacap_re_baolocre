@@ -8,7 +8,7 @@ interface SliderSectionProps {
   images: HomepageSliderType[];
 }
 
-function SliderSection({ images }: SliderSectionProps) {
+const SliderSection = ({ images }: SliderSectionProps) => {
   return (
     <Swiper
       autoplay={{
@@ -32,6 +32,6 @@ function SliderSection({ images }: SliderSectionProps) {
       ))}
     </Swiper>
   );
-}
+};
 
 export default SliderSection;

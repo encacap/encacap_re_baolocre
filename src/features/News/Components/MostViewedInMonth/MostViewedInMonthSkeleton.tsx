@@ -1,6 +1,6 @@
 import MostViewedInMonthSkeletonItem from "./MostViewedInMonthSkeletonItem";
 
-function MostViewedInMonthSkeleton() {
+const MostViewedInMonthSkeleton = () => {
   return (
     <div>
       <MostViewedInMonthSkeletonItem />
@@ -9,6 +9,6 @@ function MostViewedInMonthSkeleton() {
       <MostViewedInMonthSkeletonItem />
     </div>
   );
-}
+};
 
 export default MostViewedInMonthSkeleton;

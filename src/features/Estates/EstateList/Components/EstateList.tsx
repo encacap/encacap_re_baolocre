@@ -1,6 +1,6 @@
 import EstateHorizontal from "../../../../common/Estate/EstateHorizontal";
 
-function EstateList() {
+const EstateList = () => {
   return (
     <div className="mt-4 mb-6 border-gray-100 divide-y-2 divide-gray-100 md:divide-none md:border-b-0">
       <EstateHorizontal
@@ -66,6 +66,6 @@ function EstateList() {
       />
     </div>
   );
-}
+};
 
 export default EstateList;

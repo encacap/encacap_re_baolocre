@@ -6,7 +6,7 @@ import { NewsListPageProps } from "../../../types/pageProps";
 import HouseModalList from "../../HomePage/Components/HouseModal/HouseModalList";
 import HouseModalContentHeader from "../Components/HouseModalContentHeader";
 
-function HouseModalListPage({ head, categories }: NewsListPageProps) {
+const HouseModalListPage = ({ head, categories }: NewsListPageProps) => {
   return (
     <PageLayout head={head} footerColor="dark">
       <ContentWrapper>
@@ -32,6 +32,6 @@ function HouseModalListPage({ head, categories }: NewsListPageProps) {
       </ContentWrapper>
     </PageLayout>
   );
-}
+};
 
 export default HouseModalListPage;

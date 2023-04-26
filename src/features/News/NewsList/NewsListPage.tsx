@@ -8,7 +8,7 @@ import NewsContentHeader from "../Components/NewsContentHeader";
 import NewsSearch from "../Components/NewsSearch";
 import NewsList from "./Components/NewsList";
 
-function NewsListPage({ head, categories }: NewsListPageProps) {
+const NewsListPage = ({ head, categories }: NewsListPageProps) => {
   return (
     <PageLayout head={head} footerColor="dark">
       <ContentWrapper>
@@ -38,6 +38,6 @@ function NewsListPage({ head, categories }: NewsListPageProps) {
       </ContentWrapper>
     </PageLayout>
   );
-}
+};
 
 export default NewsListPage;

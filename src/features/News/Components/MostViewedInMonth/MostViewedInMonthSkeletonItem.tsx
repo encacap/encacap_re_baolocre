@@ -1,6 +1,6 @@
 import LoadingSkeleton from "../../../../common/LoadingSkeleton";
 
-function MostViewedInMonthSkeletonItem() {
+const MostViewedInMonthSkeletonItem = () => {
   return (
     <div className="flex py-5 border-b-2 border-gray-100 last:border-b-0">
       <LoadingSkeleton className="w-10 h-10 mr-4 rounded-lg" />
@@ -12,6 +12,6 @@ function MostViewedInMonthSkeletonItem() {
       </div>
     </div>
   );
-}
+};
 
 export default MostViewedInMonthSkeletonItem;

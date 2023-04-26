@@ -9,7 +9,7 @@ interface SocialItemsProps {
   className?: string;
 }
 
-function SocialItems({ contactInformation, className }: SocialItemsProps) {
+const SocialItems = ({ contactInformation, className }: SocialItemsProps) => {
   if (_.isEmpty(contactInformation?.facebook) && _.isEmpty(contactInformation?.youtube)) {
     return null;
   }
@@ -20,6 +20,6 @@ function SocialItems({ contactInformation, className }: SocialItemsProps) {
       {contactInformation?.youtube && <WrappedYoutubeIcon href={contactInformation.youtube} />}
     </div>
   );
-}
+};
 
 export default SocialItems;

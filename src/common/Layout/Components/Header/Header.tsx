@@ -8,7 +8,7 @@ export interface HeaderProps {
   contactInformation?: ContactInformationType;
 }
 
-function Header({ isHideMobileNavbar = false, contactInformation }: HeaderProps) {
+const Header = ({ isHideMobileNavbar = false, contactInformation }: HeaderProps) => {
   return (
     <div className="w-full px-4 border-b-2 border-gray-100 shadow-md shadow-gray-50 lg:px-10">
       <div className="flex items-center justify-between h-20 md:h-20">
@@ -31,6 +31,6 @@ function Header({ isHideMobileNavbar = false, contactInformation }: HeaderProps)
       )}
     </div>
   );
-}
+};
 
 export default Header;

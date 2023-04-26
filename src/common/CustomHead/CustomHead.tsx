@@ -6,7 +6,7 @@ interface CustomHeadProps {
   head: HTMLHeadType;
 }
 
-function CustomHead({ head }: CustomHeadProps) {
+const CustomHead = ({ head }: CustomHeadProps) => {
   const websiteName = useMemo(() => process.env.NEXT_PUBLIC_WEBSITE_NAME, []);
 
   return (
@@ -14,6 +14,6 @@ function CustomHead({ head }: CustomHeadProps) {
       <title>{`${head.title} - ${websiteName}`}</title>
     </Head>
   );
-}
+};
 
 export default CustomHead;

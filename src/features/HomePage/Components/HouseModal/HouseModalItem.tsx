@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function HouseModalItem() {
+const HouseModalItem = () => {
   return (
     <div className="w-full overflow-hidden rounded-lg shadow-md shadow-black/10 group">
       <div className="relative w-full aspect-video">
@@ -18,6 +18,6 @@ function HouseModalItem() {
       </div>
     </div>
   );
-}
+};
 
 export default HouseModalItem;

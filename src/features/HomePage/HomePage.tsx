@@ -7,7 +7,7 @@ import NewsSection from "./Components/NewsSection";
 import SearchSection from "./Components/SearchSection";
 import SliderSection from "./Components/SliderSection";
 
-function HomePage({ head, sliderImages }: HomePageProps) {
+const HomePage = ({ head, sliderImages }: HomePageProps) => {
   return (
     <PageLayout head={head} footerColor="dark" isHideMobileNavbar>
       <SliderSection images={sliderImages} />
@@ -18,6 +18,6 @@ function HomePage({ head, sliderImages }: HomePageProps) {
       <HouseModelSection />
     </PageLayout>
   );
-}
+};
 
 export default HomePage;

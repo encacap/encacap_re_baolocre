@@ -1,4 +1,4 @@
-function EstateDescription() {
+const EstateDescription = () => {
   return (
     <>
       <div className="text-lg font-semibold">Thông tin chi tiết</div>
@@ -17,6 +17,6 @@ function EstateDescription() {
       </div>
     </>
   );
-}
+};
 
 export default EstateDescription;

@@ -1,6 +1,6 @@
 import FacebookRectangleIcon from "../../../../../common/Icons/FacebookRectangleIcon";
 
-function FacebookShareButton() {
+const FacebookShareButton = () => {
   const handleClickShareButton = () => {
     const currentURL = window.location.href;
     const facebookURL = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
@@ -20,6 +20,6 @@ function FacebookShareButton() {
       Chia sẻ
     </div>
   );
-}
+};
 
 export default FacebookShareButton;

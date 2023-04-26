@@ -14,7 +14,7 @@ import SameDistrictEstates from "./Components/SameDistrictEstates";
 import SocialShareButtons from "./Components/SocialShareButtons/SocialShareButtons";
 import SuggestionEstates from "./Components/SuggestionEstates";
 
-function EstateDetailPage({ head, categories }: EstateDetailPageProps) {
+const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
   return (
     <PageLayout head={head} footerColor="dark">
       <ContentWrapper>
@@ -70,6 +70,6 @@ function EstateDetailPage({ head, categories }: EstateDetailPageProps) {
       </ContentWrapper>
     </PageLayout>
   );
-}
+};
 
 export default EstateDetailPage;

@@ -6,7 +6,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
 
-function Button({ color, children, className, type = "button" }: ButtonProps) {
+const Button = ({ color, children, className, type = "button" }: ButtonProps) => {
   const colorClassName = {
     gray: "text-black bg-gray-50 border-gray-100 hover:bg-encacap-main hover:border-encacap-main hover:text-white",
   };
@@ -24,6 +24,6 @@ function Button({ color, children, className, type = "button" }: ButtonProps) {
       {children}
     </button>
   );
-}
+};
 
 export default Button;

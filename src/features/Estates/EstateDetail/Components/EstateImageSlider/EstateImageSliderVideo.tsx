@@ -9,7 +9,7 @@ interface REDImageSliderVideoProps {
   priority?: boolean;
 }
 
-function EstateImageSliderVideo({ videoId, thumbnailSrc, priority }: REDImageSliderVideoProps) {
+const EstateImageSliderVideo = ({ videoId, thumbnailSrc, priority }: REDImageSliderVideoProps) => {
   const [videoRef, setVideoRef] = useState<YouTubeEvent["target"]>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isShowThumbnail, setIsShowThumbnail] = useState(true);
@@ -65,6 +65,6 @@ function EstateImageSliderVideo({ videoId, thumbnailSrc, priority }: REDImageSli
       />
     </div>
   );
-}
+};
 
 export default EstateImageSliderVideo;

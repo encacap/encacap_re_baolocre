@@ -2,9 +2,9 @@ import { estateCategories } from "../../../../../../../const/data";
 import EstateDetailPage from "../../../../../../../features/Estates/EstateDetail/EstateDetailPage";
 import { EstateDetailPageProps } from "../../../../../../../types/pageProps";
 
-function Home(props: EstateDetailPageProps) {
+const Home = (props: EstateDetailPageProps) => {
   return <EstateDetailPage {...props} />;
-}
+};
 
 export const getServerSideProps = () => {
   const head = { title: "Danh sách bất động sản đang bán" };

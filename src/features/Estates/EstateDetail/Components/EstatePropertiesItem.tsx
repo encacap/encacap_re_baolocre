@@ -7,7 +7,7 @@ interface EstatePropertiesItemProps {
   isHighlight?: boolean;
 }
 
-function EstatePropertiesItem({ name, value, isHighlight }: EstatePropertiesItemProps) {
+const EstatePropertiesItem = ({ name, value, isHighlight }: EstatePropertiesItemProps) => {
   return (
     <div className="pr-4">
       <div
@@ -18,6 +18,6 @@ function EstatePropertiesItem({ name, value, isHighlight }: EstatePropertiesItem
       <div className={twMerge("py-1 text-lg font-semibold", isHighlight && "text-encacap-main")}>{value}</div>
     </div>
   );
-}
+};
 
 export default EstatePropertiesItem;

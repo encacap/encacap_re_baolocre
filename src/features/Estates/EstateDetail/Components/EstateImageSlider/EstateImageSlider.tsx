@@ -9,7 +9,7 @@ import EstateImageSliderNextButton from "./EstateImageSliderNextButton";
 import EstateImageSliderPrevButton from "./EstateImageSliderPrevButton";
 import EstateImageSliderVideo from "./EstateImageSliderVideo";
 
-function EstateImageSlider() {
+const EstateImageSlider = () => {
   const pagination: PaginationOptions = {
     type: "fraction",
     horizontalClass:
@@ -47,6 +47,6 @@ function EstateImageSlider() {
       <EstateImageSliderNextButton />
     </div>
   );
-}
+};
 
 export default EstateImageSlider;

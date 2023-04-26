@@ -1,7 +1,7 @@
 import HouseModalList from "./HouseModal/HouseModalList";
 import ViewMoreButton from "./ViewMoreButton";
 
-function HouseModelSection() {
+const HouseModelSection = () => {
   return (
     <section className="py-10 border-t-2 border-b-2 border-gray-100 md:border-0 md:px-4 lg:px-10 xl:px-48 md:py-20 md:bg-gray-200">
       <div className="flex flex-col items-center">
@@ -15,6 +15,6 @@ function HouseModelSection() {
       </div>
     </section>
   );
-}
+};
 
 export default HouseModelSection;

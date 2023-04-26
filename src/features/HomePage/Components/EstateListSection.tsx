@@ -1,7 +1,7 @@
 import EstateVertical from "../../../common/Estate/EstateVertical";
 import ViewMoreButton from "./ViewMoreButton";
 
-function EstateListSection() {
+const EstateListSection = () => {
   return (
     <section className="py-10 border-t-2 border-b-2 border-gray-100 md:border-t-0 md:border-b-0 md:px-4 lg:px-10 xl:px-48 md:py-20 md:bg-gray-100">
       <div className="flex flex-col items-center px-4 md:px-0">
@@ -26,6 +26,6 @@ function EstateListSection() {
       </div>
     </section>
   );
-}
+};
 
 export default EstateListSection;

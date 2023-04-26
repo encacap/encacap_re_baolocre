@@ -7,7 +7,7 @@ interface CategoryItemProps {
   name: string;
 }
 
-function CategoryItem({ href, image, name }: CategoryItemProps) {
+const CategoryItem = ({ href, image, name }: CategoryItemProps) => {
   return (
     <Link href={href}>
       <a
@@ -21,6 +21,6 @@ function CategoryItem({ href, image, name }: CategoryItemProps) {
       </a>
     </Link>
   );
-}
+};
 
 export default CategoryItem;

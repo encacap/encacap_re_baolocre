@@ -11,7 +11,7 @@ const defaultBreadcrumbItems = [
   },
 ];
 
-function Breadcrumb({ items, className }: BreadcrumbProps) {
+const Breadcrumb = ({ items, className }: BreadcrumbProps) => {
   const [totalBreadcrumbItems, setTotalBreadcrumbItems] = useState(0);
   const breadcrumbs = useMemo<BreadcrumbType[]>(() => {
     let urlTree = "/";
@@ -41,6 +41,6 @@ function Breadcrumb({ items, className }: BreadcrumbProps) {
       ))}
     </div>
   );
-}
+};
 
 export default Breadcrumb;

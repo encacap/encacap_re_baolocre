@@ -1,6 +1,6 @@
 import MostViewedInMonthSkeleton from "./MostViewedInMonthSkeleton";
 
-function MostViewedInMonth() {
+const MostViewedInMonth = () => {
   return (
     <div className="px-5 pt-4 pb-0 border-2 border-gray-100 rounded-md shadow-md shadow-gray-100">
       <div className="pb-4 font-semibold border-b-2 border-gray-100">Được xem nhiều nhất trong tháng</div>
@@ -17,6 +17,6 @@ function MostViewedInMonth() {
       <MostViewedInMonthSkeleton />
     </div>
   );
-}
+};
 
 export default MostViewedInMonth;

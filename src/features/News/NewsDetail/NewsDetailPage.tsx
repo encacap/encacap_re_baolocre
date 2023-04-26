@@ -8,7 +8,7 @@ import NewsContentHeader from "../Components/NewsContentHeader";
 import NewsSearch from "../Components/NewsSearch";
 import RandomNewsList from "../Components/RandomNewsList";
 
-function NewsDetailPage({ head, categories }: NewsDetailPageProps) {
+const NewsDetailPage = ({ head, categories }: NewsDetailPageProps) => {
   return (
     <PageLayout head={head} footerColor="dark">
       <ContentWrapper>
@@ -49,6 +49,6 @@ function NewsDetailPage({ head, categories }: NewsDetailPageProps) {
       </ContentWrapper>
     </PageLayout>
   );
-}
+};
 
 export default NewsDetailPage;

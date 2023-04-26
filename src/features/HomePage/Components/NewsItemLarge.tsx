@@ -7,7 +7,7 @@ interface NewsProps {
   news: NewsType;
 }
 
-function NewsItemLarge({ news }: NewsProps) {
+const NewsItemLarge = ({ news }: NewsProps) => {
   return (
     <Link href="/">
       <a className="pb-4 border-b-2 border-gray-100 md:mr-5 md:border-b-0 md:pb-0 hover:text-encacap-main">
@@ -29,6 +29,6 @@ function NewsItemLarge({ news }: NewsProps) {
       </a>
     </Link>
   );
-}
+};
 
 export default NewsItemLarge;

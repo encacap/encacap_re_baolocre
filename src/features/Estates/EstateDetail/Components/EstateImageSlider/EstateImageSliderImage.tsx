@@ -6,7 +6,7 @@ interface REDSwitchImageProps {
   priority?: boolean;
 }
 
-function EstateImageSliderImage({ src, alt, priority }: REDSwitchImageProps) {
+const EstateImageSliderImage = ({ src, alt, priority }: REDSwitchImageProps) => {
   return (
     <div className="relative w-full h-full">
       <div className="absolute inset-0 -z-10 blur-xl bg-white/30">
@@ -28,6 +28,6 @@ function EstateImageSliderImage({ src, alt, priority }: REDSwitchImageProps) {
       />
     </div>
   );
-}
+};
 
 export default EstateImageSliderImage;

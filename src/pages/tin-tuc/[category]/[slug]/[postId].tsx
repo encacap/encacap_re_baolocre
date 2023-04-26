@@ -2,9 +2,9 @@ import { newsCategories } from "../../../../const/data";
 import NewsDetailPage from "../../../../features/News/NewsDetail/NewsDetailPage";
 import { NewsDetailPageProps } from "../../../../types/pageProps";
 
-function Home(props: NewsDetailPageProps) {
+const Home = (props: NewsDetailPageProps) => {
   return <NewsDetailPage {...props} />;
-}
+};
 
 export const getServerSideProps = () => {
   const head = {

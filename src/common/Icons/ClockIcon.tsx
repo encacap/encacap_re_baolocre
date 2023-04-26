@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 
-function ClockIcon(props: HTMLAttributes<SVGElement>) {
+const ClockIcon = (props: HTMLAttributes<SVGElement>) => {
   return (
     <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" {...props}>
       <path
@@ -19,6 +19,6 @@ function ClockIcon(props: HTMLAttributes<SVGElement>) {
       />
     </svg>
   );
-}
+};
 
 export default ClockIcon;

@@ -1,7 +1,7 @@
 import NewsItemLarge from "./NewsItemLarge";
 import NewsItemNormal from "./NewsItemNormal";
 
-function NewsList() {
+const NewsList = () => {
   return (
     <div className="grid mt-10 overflow-hidden md:grid-cols-2 lg:grid-cols-3 md:gap-2 md:divide-x-2">
       <NewsItemLarge
@@ -21,6 +21,6 @@ function NewsList() {
       </div>
     </div>
   );
-}
+};
 
 export default NewsList;

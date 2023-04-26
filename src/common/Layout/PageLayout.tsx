@@ -13,7 +13,7 @@ interface LayoutProps extends HeaderProps {
   footerColor?: "light" | "dark";
 }
 
-function PageLayout({ children, head, footerColor = "light", isHideMobileNavbar }: LayoutProps) {
+const PageLayout = ({ children, head, footerColor = "light", isHideMobileNavbar }: LayoutProps) => {
   const contactInformation = useAppSelector((state) => state.layout.contactInformation);
   const dispatch = useAppDispatch();
 
@@ -31,6 +31,6 @@ function PageLayout({ children, head, footerColor = "light", isHideMobileNavbar 
       <Footer color={footerColor} contactInformation={contactInformation} />
     </>
   );
-}
+};
 
 export default PageLayout;

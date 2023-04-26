@@ -6,7 +6,7 @@ export interface IconProps {
   className?: string;
 }
 
-function IconWrapper({ children, href, className }: IconProps) {
+const IconWrapper = ({ children, href, className }: IconProps) => {
   return (
     <a
       href={href}
@@ -17,6 +17,6 @@ function IconWrapper({ children, href, className }: IconProps) {
       {children}
     </a>
   );
-}
+};
 
 export default IconWrapper;

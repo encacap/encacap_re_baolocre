@@ -6,7 +6,7 @@ interface ViewMoreButtonProps {
   href: string;
 }
 
-function ViewMoreButton({ text, href }: ViewMoreButtonProps) {
+const ViewMoreButton = ({ text, href }: ViewMoreButtonProps) => {
   return (
     <div className="flex justify-center mt-6 md:mt-10 md:mx-0">
       <Link href={href} passHref>
@@ -20,6 +20,6 @@ function ViewMoreButton({ text, href }: ViewMoreButtonProps) {
       </Link>
     </div>
   );
-}
+};
 
 export default ViewMoreButton;

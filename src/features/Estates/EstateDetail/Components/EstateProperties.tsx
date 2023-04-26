@@ -1,6 +1,6 @@
 import EstatePropertiesItem from "./EstatePropertiesItem";
 
-function EstateProperties() {
+const EstateProperties = () => {
   return (
     <div className="mt-8 mb-4 border-t-2 border-b-2 border-gray-100">
       <div className="-my-0.5">
@@ -23,6 +23,6 @@ function EstateProperties() {
       </div>
     </div>
   );
-}
+};
 
 export default EstateProperties;

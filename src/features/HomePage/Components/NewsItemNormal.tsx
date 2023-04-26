@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function NewsItemNormal() {
+const NewsItemNormal = () => {
   return (
     <a href="/" className="flex items-center py-4 hover:text-encacap-main">
       <div className="flex-shrink-0 w-24 h-16 mr-4">
@@ -19,6 +19,6 @@ function NewsItemNormal() {
       </div>
     </a>
   );
-}
+};
 
 export default NewsItemNormal;

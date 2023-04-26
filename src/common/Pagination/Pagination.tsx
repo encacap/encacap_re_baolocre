@@ -9,7 +9,7 @@ interface PaginationProps {
   children?: ReactNode;
 }
 
-function Pagination({ className, children }: PaginationProps) {
+const Pagination = ({ className, children }: PaginationProps) => {
   return (
     <div className={twMerge("flex items-center justify-center", className)}>
       {children}
@@ -21,6 +21,6 @@ function Pagination({ className, children }: PaginationProps) {
       </div>
     </div>
   );
-}
+};
 
 export default Pagination;

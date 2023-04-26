@@ -13,7 +13,7 @@ interface EstateHorizontalProps extends EstateType {
   to: string;
 }
 
-function EstateHorizontal({
+const EstateHorizontal = ({
   title,
   thumbnail,
   price,
@@ -24,7 +24,7 @@ function EstateHorizontal({
   priority = false,
   special = false,
   to,
-}: EstateHorizontalProps) {
+}: EstateHorizontalProps) => {
   return (
     <div className="w-full mb-4 overflow-hidden duration-200 group md:flex md:mt-4 md:mb-0 md:rounded-md hover:text-encacap-main md:hover:shadow-gray-100 md:hover:shadow-lg">
       {special && (
@@ -127,6 +127,6 @@ function EstateHorizontal({
       </div>
     </div>
   );
-}
+};
 
 export default EstateHorizontal;

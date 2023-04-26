@@ -1,6 +1,6 @@
 import AsideFilterItem from "./FilterByAreaItem";
 
-function FilterByArea() {
+const FilterByArea = () => {
   return (
     <div className="px-5 py-4 border-2 border-gray-100 rounded-md shadow-md shadow-gray-100">
       <div className="pb-4 font-semibold border-b-2 border-gray-100">Lọc theo diện tích</div>
@@ -29,6 +29,6 @@ function FilterByArea() {
       </div>
     </div>
   );
-}
+};
 
 export default FilterByArea;

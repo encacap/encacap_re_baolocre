@@ -1,6 +1,6 @@
 import AsideFilterItem from "./FilterByAreaItem";
 
-function FilterByRegion() {
+const FilterByRegion = () => {
   return (
     <div className="px-5 py-4 border-2 rounded-md shadow-md border-encacap-main bg-opacity-10 bg-encacap-main shadow-gray-200">
       <div className="pb-4 font-semibold border-b-2 border-encacap-main">Bất động sản theo khu vực</div>
@@ -11,6 +11,6 @@ function FilterByRegion() {
       </div>
     </div>
   );
-}
+};
 
 export default FilterByRegion;

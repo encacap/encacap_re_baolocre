@@ -1,6 +1,6 @@
 import CategoryItem from "./CategoryItem";
 
-function CategorySection() {
+const CategorySection = () => {
   return (
     <section className="pt-10 md:pt-6 lg:px-10 xl:px-48 md:pb-12">
       <div className="flex flex-col items-center">
@@ -27,6 +27,6 @@ function CategorySection() {
       </div>
     </section>
   );
-}
+};
 
 export default CategorySection;

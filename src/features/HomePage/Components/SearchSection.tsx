@@ -1,6 +1,6 @@
 import SearchIcon from "../../../common/Icons/SearchIcon";
 
-function SearchSection() {
+const SearchSection = () => {
   return (
     <section className="relative z-10 overflow-hidden bg-white border-b-2 border-gray-100 md:-top-14 md:border-b-0 md:shadow-lg md:shadow-gray-100 md:rounded-md md:mx-4 lg:mx-10 xl:mx-48">
       <div className="items-center hidden px-4 py-4 font-medium text-white uppercase md:flex bg-encacap-blue md:px-6">
@@ -34,6 +34,6 @@ function SearchSection() {
       </div>
     </section>
   );
-}
+};
 
 export default SearchSection;

@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 
-function ZaloIcon({ className }: HTMLAttributes<HTMLElement>) {
+const ZaloIcon = ({ className }: HTMLAttributes<HTMLElement>) => {
   return (
     <svg viewBox="144.605 378.566 159.607 63.582" xmlns="https://www.w3.org/2000/svg" className={className}>
       <path
@@ -13,6 +13,6 @@ function ZaloIcon({ className }: HTMLAttributes<HTMLElement>) {
       />
     </svg>
   );
-}
+};
 
 export default ZaloIcon;

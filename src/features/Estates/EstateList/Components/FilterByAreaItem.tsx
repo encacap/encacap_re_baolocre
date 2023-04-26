@@ -8,7 +8,7 @@ interface AsideFilterItemProps {
   children: ReactNode;
 }
 
-function AsideFilterItem({ href, children, className }: AsideFilterItemProps) {
+const AsideFilterItem = ({ href, children, className }: AsideFilterItemProps) => {
   return (
     <Link href={href}>
       <a href={href} className={twMerge("block py-1 duration-200 hover:text-encacap-main", className)}>
@@ -16,6 +16,6 @@ function AsideFilterItem({ href, children, className }: AsideFilterItemProps) {
       </a>
     </Link>
   );
-}
+};
 
 export default AsideFilterItem;

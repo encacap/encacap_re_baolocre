@@ -7,7 +7,7 @@ interface PaginationItemProps {
   isActive?: boolean;
 }
 
-function PaginationItem({ href, pageNumber, isActive = false }: PaginationItemProps) {
+const PaginationItem = ({ href, pageNumber, isActive = false }: PaginationItemProps) => {
   return (
     <Link href={href}>
       <a
@@ -21,6 +21,6 @@ function PaginationItem({ href, pageNumber, isActive = false }: PaginationItemPr
       </a>
     </Link>
   );
-}
+};
 
 export default PaginationItem;

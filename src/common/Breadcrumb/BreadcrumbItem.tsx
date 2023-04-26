@@ -6,7 +6,7 @@ interface BreadcrumbItemProps {
   haveSeparator?: boolean;
 }
 
-function BreadcrumbItem({ href, label, haveSeparator = true }: BreadcrumbItemProps) {
+const BreadcrumbItem = ({ href, label, haveSeparator = true }: BreadcrumbItemProps) => {
   return (
     <div className="flex items-center">
       <Link href={href}>
@@ -15,6 +15,6 @@ function BreadcrumbItem({ href, label, haveSeparator = true }: BreadcrumbItemPro
       {haveSeparator && <span className="ml-2 mr-2.5 text-gray-400">/</span>}
     </div>
   );
-}
+};
 
 export default BreadcrumbItem;

@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 import PhoneRingIcon from "../../../../common/Icons/PhoneRingIcon";
 import ZaloIcon from "../../../../common/Icons/ZaloTextIcon";
 
-function ContactInformation({ className }: HTMLAttributes<HTMLElement>) {
+const ContactInformation = ({ className }: HTMLAttributes<HTMLElement>) => {
   return (
     <div
       className={twMerge(
@@ -41,6 +41,6 @@ function ContactInformation({ className }: HTMLAttributes<HTMLElement>) {
       </div>
     </div>
   );
-}
+};
 
 export default ContactInformation;

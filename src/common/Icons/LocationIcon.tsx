@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 
-function LocationIcon(props: HTMLAttributes<SVGElement>) {
+const LocationIcon = (props: HTMLAttributes<SVGElement>) => {
   return (
     <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" {...props}>
       <path
@@ -15,6 +15,6 @@ function LocationIcon(props: HTMLAttributes<SVGElement>) {
       />
     </svg>
   );
-}
+};
 
 export default LocationIcon;

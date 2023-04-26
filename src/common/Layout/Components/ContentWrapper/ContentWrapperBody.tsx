@@ -5,12 +5,12 @@ interface ContentWrapperBodyProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode | ReactNode[];
 }
 
-function ContentWrapperBody({ children, className, ...otherProps }: ContentWrapperBodyProps) {
+const ContentWrapperBody = ({ children, className, ...otherProps }: ContentWrapperBodyProps) => {
   return (
     <div className={twMerge("col-span-4 lg:col-span-3", className)} {...otherProps}>
       {children}
     </div>
   );
-}
+};
 
 export default ContentWrapperBody;

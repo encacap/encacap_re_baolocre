@@ -5,7 +5,7 @@ interface HouseModalListProps {
   className?: string;
 }
 
-function HouseModalList({ className }: HouseModalListProps) {
+const HouseModalList = ({ className }: HouseModalListProps) => {
   return (
     <div
       className={twMerge(
@@ -21,6 +21,6 @@ function HouseModalList({ className }: HouseModalListProps) {
       <HouseModalItem />
     </div>
   );
-}
+};
 
 export default HouseModalList;

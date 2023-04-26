@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ClockIcon from "../Icons/ClockIcon";
 
-function NewsVertical() {
+const NewsVertical = () => {
   return (
     <Link
       href="/tin-tuc/thong-tin-quy-hoach/lam-dong-cho-phep-lap-quy-hoach-du-an-quan-the-vui-choi-giai-tri-lang-chau-au-18000-ha/1"
@@ -35,6 +35,6 @@ function NewsVertical() {
       </a>
     </Link>
   );
-}
+};
 
 export default NewsVertical;

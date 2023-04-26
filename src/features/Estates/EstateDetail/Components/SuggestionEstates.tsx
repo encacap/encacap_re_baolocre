@@ -1,6 +1,6 @@
 import EstateVertical from "../../../../common/Estate/EstateVertical";
 
-function SuggestionEstates() {
+const SuggestionEstates = () => {
   return (
     <div className="pt-4 mt-2 border-t-2 border-gray-100 md:pt-5 md:mt-8">
       <div className="mt-1 mb-0 text-lg font-semibold md:mb-6">Có thể bạn quan tâm</div>
@@ -12,6 +12,6 @@ function SuggestionEstates() {
       </div>
     </div>
   );
-}
+};
 
 export default SuggestionEstates;

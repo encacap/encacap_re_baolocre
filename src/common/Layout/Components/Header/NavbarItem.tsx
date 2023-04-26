@@ -8,7 +8,7 @@ interface SidebarItemProps {
   children?: ReactNode;
 }
 
-function NavbarItem({ href, isActive = false, children }: SidebarItemProps) {
+const NavbarItem = ({ href, isActive = false, children }: SidebarItemProps) => {
   return (
     <Link href={href}>
       <a
@@ -27,6 +27,6 @@ function NavbarItem({ href, isActive = false, children }: SidebarItemProps) {
       </a>
     </Link>
   );
-}
+};
 
 export default NavbarItem;

@@ -6,7 +6,7 @@ interface SidebarContainerProps {
   children: ReactNode;
 }
 
-function NavbarContainer({ className, children: sidebarItems }: SidebarContainerProps) {
+const NavbarContainer = ({ className, children: sidebarItems }: SidebarContainerProps) => {
   const { pathname } = useRouter();
   const navbarContainerRef = useRef<HTMLElement>(null);
 
@@ -37,6 +37,6 @@ function NavbarContainer({ className, children: sidebarItems }: SidebarContainer
       })}
     </nav>
   );
-}
+};
 
 export default NavbarContainer;

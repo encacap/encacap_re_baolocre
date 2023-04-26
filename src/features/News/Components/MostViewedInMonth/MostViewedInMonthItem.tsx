@@ -9,7 +9,7 @@ interface MostViewedInMonthItemProps {
   className?: string;
 }
 
-function MostViewedInMonthItem({ href, title, image, className }: MostViewedInMonthItemProps) {
+const MostViewedInMonthItem = ({ href, title, image, className }: MostViewedInMonthItemProps) => {
   return (
     <Link href={href} passHref>
       <a
@@ -32,6 +32,6 @@ function MostViewedInMonthItem({ href, title, image, className }: MostViewedInMo
       </a>
     </Link>
   );
-}
+};
 
 export default MostViewedInMonthItem;

@@ -2,7 +2,7 @@ import { HTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 import SearchIcon from "../../../../common/Icons/SearchIcon";
 
-function EstateSearch({ className }: HTMLAttributes<HTMLElement>) {
+const EstateSearch = ({ className }: HTMLAttributes<HTMLElement>) => {
   return (
     <form
       className={twMerge("relative block lg:shadow-md lg:shadow-gray-100", className)}
@@ -26,6 +26,6 @@ function EstateSearch({ className }: HTMLAttributes<HTMLElement>) {
       </button>
     </form>
   );
-}
+};
 
 export default EstateSearch;

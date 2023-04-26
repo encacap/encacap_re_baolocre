@@ -1,6 +1,6 @@
 import EstateVertical from "../../../../common/Estate/EstateVertical";
 
-function SameDistrictEstates() {
+const SameDistrictEstates = () => {
   return (
     <div className="pt-5 border-t-2 border-gray-100 mt-9">
       <div className="mt-1 mb-0 text-lg font-semibold md:mb-6">
@@ -14,6 +14,6 @@ function SameDistrictEstates() {
       </div>
     </div>
   );
-}
+};
 
 export default SameDistrictEstates;

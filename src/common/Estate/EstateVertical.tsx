@@ -12,7 +12,7 @@ interface EstatesHorizontalProps {
   priority?: boolean;
 }
 
-function EstateVertical({ title, isSpecial, priority = false }: EstatesHorizontalProps) {
+const EstateVertical = ({ title, isSpecial, priority = false }: EstatesHorizontalProps) => {
   return (
     <div className="overflow-hidden duration-200 bg-white border-b-2 border-gray-100 group md:shadow-md md:shadow-gray-200 md:rounded-lg md:border-b-0 md:hover:shadow-lg last:border-b-0">
       {isSpecial && (
@@ -107,6 +107,6 @@ function EstateVertical({ title, isSpecial, priority = false }: EstatesHorizonta
       </div>
     </div>
   );
-}
+};
 
 export default EstateVertical;
