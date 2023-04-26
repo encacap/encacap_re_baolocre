@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "cross-env NODE_ENV=development SERVER_HOSTNAME=baolocre.dev SERVER_PORT=22401 node ./server.js",
+        "dev": "dotenv -e ./.env.development node ./server.js",
         "build": "next build",
         "start": "cross-env NODE_ENV=production SERVER_PORT=22401 node ./server.js",
         "lint": "eslint . --fix"
@@ -35,7 +35,7 @@
         "@typescript-eslint/eslint-plugin": "^5.21.1-alpha.4",
         "@typescript-eslint/parser": "^5.21.0",
         "autoprefixer": "^10.4.5",
-        "cross-env": "^7.0.3",
+        "dotenv-cli": "^7.2.1",
         "eslint": "^7.32.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-next": "12.1.5",

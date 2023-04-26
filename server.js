@@ -12,12 +12,12 @@ const app = next({ dev: isDevEnvironment, hostname: HOSTNAME, port: PORT });
 const handler = app.getRequestHandler();
 
 const certFolder = "./.certs";
-const pemFilePath = `${certFolder}/${HOSTNAME}.pem`;
-const crtFilePath = `${certFolder}/${HOSTNAME}.crt`;
+const keyFile = `${certFolder}/encacap.com.key`;
+const crtFilePath = `${certFolder}/encacap.com.crt`;
 
 const startSSLServer = () => {
     const options = {
-        key: fs.readFileSync(pemFilePath),
+        key: fs.readFileSync(keyFile),
         cert: fs.readFileSync(crtFilePath),
     };
 
@@ -46,7 +46,7 @@ const startNormalServer = () => {
 
 const startServer = () => {
     if (isDevEnvironment) {
-        if (fs.existsSync(pemFilePath) && fs.existsSync(crtFilePath)) {
+        if (fs.existsSync(keyFile) && fs.existsSync(crtFilePath)) {
             startSSLServer();
             return;
         }
