@@ -2,7 +2,7 @@ import Image from "next/image";
 import { HTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 import PhoneRingIcon from "../../../../common/Icons/PhoneRingIcon";
-import ZaloIcon from "../../../../common/Icons/ZaloTextIcon";
+import ZaloTextIcon from "../../../../common/Icons/ZaloTextIcon";
 
 const ContactInformation = ({ className }: HTMLAttributes<HTMLElement>) => {
   return (
@@ -36,7 +36,7 @@ const ContactInformation = ({ className }: HTMLAttributes<HTMLElement>) => {
           href="https://www.zalo.me/<%= contact.phone %>"
           className="flex items-center justify-center px-4 py-3 mt-5 ml-4 font-semibold duration-200 bg-white border-2 rounded-lg border-encacap-zalo text-encacap-zalo hover:bg-encacap-zalo hover:text-white"
         >
-          <ZaloIcon className="w-8" />
+          <ZaloTextIcon className="w-8" />
         </a>
       </div>
     </div>

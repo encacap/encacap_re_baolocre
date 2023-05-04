@@ -27,6 +27,7 @@ export interface NewsType {
 
 export interface HTMLHeadType {
   title: string;
+  siteName: string;
 }
 
 export interface CategoryType {

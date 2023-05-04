@@ -2,5 +2,26 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.organizeImports": true
-  }
+  },
+  "prettier.tabWidth": 2,
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#ad415c",
+    "activityBar.background": "#ad415c",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#63b946",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#ad415c",
+    "statusBar.background": "#883348",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#ad415c",
+    "statusBarItem.remoteBackground": "#883348",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#883348",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#88334899",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.remoteColor": "#883348"
 }

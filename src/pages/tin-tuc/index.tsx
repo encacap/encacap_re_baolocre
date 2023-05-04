@@ -1,4 +1,4 @@
-import { newsCategories } from "../../const/data";
+import { newsCategories } from "../../constants/data";
 import NewsListPage from "../../features/News/NewsList/NewsListPage";
 import { NewsListPageProps } from "../../types/pageProps";
 

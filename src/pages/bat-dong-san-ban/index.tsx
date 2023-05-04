@@ -1,4 +1,4 @@
-import { estateCategories } from "../../const/data";
+import { estateCategories } from "../../constants/data";
 import EstateListPage from "../../features/Estates/EstateList/EstateListPage";
 import { EstateListPageProps } from "../../types/pageProps";
 

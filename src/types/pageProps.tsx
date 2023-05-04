@@ -1,9 +1,13 @@
+import { IResponseMeta } from "@encacap-group/types/dist/base";
+import { IEstate } from "@encacap-group/types/dist/re";
 import { CategoryType, HTMLHeadType } from "./commonTypes";
 import { HomepageSliderType } from "./dataTypes";
 
 export interface HomePageProps {
   head: HTMLHeadType;
   sliderImages: HomepageSliderType[];
+  estates: IEstate[];
+  estateMeta: IResponseMeta;
 }
 
 export interface EstateListPageProps {
