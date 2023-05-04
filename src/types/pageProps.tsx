@@ -1,5 +1,5 @@
 import { IResponseMeta } from "@encacap-group/types/dist/base";
-import { IEstate } from "@encacap-group/types/dist/re";
+import { ICategory, IEstate } from "@encacap-group/types/dist/re";
 import { CategoryType, HTMLHeadType } from "./commonTypes";
 import { HomepageSliderType } from "./dataTypes";
 
@@ -12,7 +12,9 @@ export interface HomePageProps {
 
 export interface EstateListPageProps {
   head: HTMLHeadType;
-  categories: CategoryType[];
+  categories: ICategory[];
+  estates: IEstate[];
+  estateMeta: IResponseMeta;
 }
 
 export interface EstateDetailPageProps {

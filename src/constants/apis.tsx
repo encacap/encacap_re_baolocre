@@ -6,3 +6,7 @@ export const CONFIG_API_PATH = {
 export const ESTATE_API_PATH = {
   ESTATES_PATH: "v1/public/estates",
 };
+
+export const CATEGORY_API_PATH = {
+  CATEGORIES_PATH: "v1/public/categories",
+};

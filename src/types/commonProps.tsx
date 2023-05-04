@@ -1,11 +1,14 @@
+import { ICategory } from "@encacap-group/types/dist/re";
 import { HTMLAttributes } from "react";
-import { BreadcrumbType, CategoryType } from "./commonTypes";
+import { BreadcrumbType } from "./commonTypes";
 
 export interface CategoryListProps extends HTMLAttributes<HTMLElement> {
-  categories: CategoryType[];
+  categories: ICategory[];
 }
 
-export type CategoryItemProps = Omit<CategoryType, "categoryId"> & HTMLAttributes<HTMLElement>;
+export interface CategoryItemProps extends HTMLAttributes<HTMLElement> {
+  category: ICategory;
+}
 
 export interface BreadcrumbProps extends HTMLAttributes<HTMLElement> {
   items: BreadcrumbType[];

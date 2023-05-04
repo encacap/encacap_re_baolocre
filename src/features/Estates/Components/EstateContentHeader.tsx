@@ -1,9 +1,9 @@
+import { ICategory } from "@encacap-group/types/dist/re";
 import Category from "../../../common/Category/Category";
-import { CategoryType } from "../../../types/commonTypes";
 import EstateSearch from "../EstateList/Components/EstateSearch";
 
 interface ContentHeaderProps {
-  categories: CategoryType[];
+  categories: ICategory[];
 }
 
 const EstateContentHeader = ({ categories }: ContentHeaderProps) => {

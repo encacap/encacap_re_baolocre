@@ -7,7 +7,7 @@ const Home = (props: HomePageProps) => {
 };
 
 export const getServerSideProps = async () => {
-  const [sliderImages, siteName, estates] = await Promise.all([
+  const [sliderImages, siteName, estateResponse] = await Promise.all([
     configService.getHomepageSliderImages(),
     configService.getSiteName(),
     estateService.getEstates({
@@ -18,7 +18,7 @@ export const getServerSideProps = async () => {
 
   const head = { title: "Trang chủ", siteName };
 
-  return { props: { head, sliderImages, estates: estates.data, estateMeta: estates.meta } };
+  return { props: { head, sliderImages, estates: estateResponse.data, estateMeta: estateResponse.meta } };
 };
 
 export default Home;

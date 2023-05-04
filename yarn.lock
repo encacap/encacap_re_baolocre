@@ -1136,10 +1136,10 @@
   dependencies:
     "@cspotcode/source-map-consumer" "0.8.0"
 
-"@encacap-group/types@^1.6.4":
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/@encacap-group/types/-/types-1.6.4.tgz#9ede8af8481995d674e4bf29bdf2498b322e81c0"
-  integrity sha512-RdeNtA7bmECCdojOUWjfQdTtruzBYWnx5Y3ryYLOS0HdB1RppWALH2tanl070M6pQ8XL0Z4OkqlrFlcVMsrVuQ==
+"@encacap-group/types@^1.6.5":
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/@encacap-group/types/-/types-1.6.5.tgz#80874f62cf0ae550d45055fb394861eeeb38b202"
+  integrity sha512-KrzH89jfeVHzycWsoc8ra/701oDgsVsFnnFACWZaQCXVH7m5ayT3vx3Tn4jMWcqBfQhoWjOuDVIvLnaSpyCUPQ==
   dependencies:
     axios "^1.4.0"
     react-hook-form "^7.43.9"
@@ -5048,6 +5048,11 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz"
   integrity sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==
+
+striptags@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/striptags/-/striptags-3.2.0.tgz#cc74a137db2de8b0b9a370006334161f7dd67052"
+  integrity sha512-g45ZOGzHDMe2bdYMdIvdAfCQkCTDMGBazSw1ypMowwGIee7ZQ5dU0rBJ8Jqgl+jAKIv4dbeE1jscZq9wid1Tkw==
 
 styled-jsx@5.0.1:
   version "5.0.1"

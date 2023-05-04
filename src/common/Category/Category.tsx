@@ -5,8 +5,8 @@ import CategoryItem from "./CategoryItem";
 const Category = ({ categories, className, ...otherProps }: CategoryListProps) => {
   return (
     <div className={twMerge("flex mb-5", className)} {...otherProps}>
-      {categories.map(({ categoryId, ...otherCategoryProps }) => (
-        <CategoryItem key={categoryId} {...otherCategoryProps} />
+      {categories.map((item) => (
+        <CategoryItem key={item.id} category={item} />
       ))}
     </div>
   );
