@@ -10,14 +10,14 @@ interface SocialItemsProps {
 }
 
 const SocialItems = ({ contactInformation, className }: SocialItemsProps) => {
-  if (_.isEmpty(contactInformation?.facebook) && _.isEmpty(contactInformation?.youtube)) {
+  if (_.isEmpty(contactInformation?.site_facebook) && _.isEmpty(contactInformation?.site_youtube)) {
     return null;
   }
 
   return (
     <div className={twMerge("hidden space-x-2 lg:flex", className)}>
-      {contactInformation?.facebook && <WrappedFacebookIcon href={contactInformation.facebook} />}
-      {contactInformation?.youtube && <WrappedYoutubeIcon href={contactInformation.youtube} />}
+      {contactInformation?.site_facebook && <WrappedFacebookIcon href={contactInformation.site_facebook} />}
+      {contactInformation?.site_youtube && <WrappedYoutubeIcon href={contactInformation.site_youtube} />}
     </div>
   );
 };

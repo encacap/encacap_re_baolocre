@@ -1,14 +1,14 @@
 import dayjs from "dayjs";
-import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import { ContactInformationType } from "../../../../types/dataTypes";
 import LocationIcon from "../../../Icons/LocationIcon";
 import PhoneRingIcon from "../../../Icons/PhoneRingIcon";
+import Logo from "../../../Logo";
 import SocialItems from "../Header/SocialItems";
 
 interface FooterProps {
   color: "light" | "dark";
-  contactInformation: ContactInformationType;
+  contactInformation: ContactInformationType | null;
 }
 
 const Footer = ({ contactInformation, color }: FooterProps) => {
@@ -16,15 +16,7 @@ const Footer = ({ contactInformation, color }: FooterProps) => {
     <footer className={twMerge("px-4 pt-4 lg:px-10 lg:pt-10 lg:bg-none", color === "dark" && "bg-gray-100")}>
       <div className="lg:flex">
         <div className="flex items-center justify-between">
-          <a href="/" className="flex items-center header-logo">
-            <div className="w-12 h-12 overflow-hidden border-2 rounded-lg border-encacap-main">
-              <Image width={48} height={48} src="/images/logo.jpg" alt="Encacap Estate Logo" />
-            </div>
-            <div className="ml-4 uppercase header-logo-text">
-              <div className="mt-1 ml-0.5 text-xs font-semibold">BĐS nghỉ dưỡng</div>
-              <div className="text-2xl font-bold text-encacap-main">Bảo Lộc</div>
-            </div>
-          </a>
+          <Logo />
           <SocialItems className="flex lg:hidden" contactInformation={contactInformation} />
         </div>
         <div className="block lg:hidden w-full h-0.5 bg-gray-200 mt-4" />
@@ -35,7 +27,7 @@ const Footer = ({ contactInformation, color }: FooterProps) => {
             </div>
             <div>
               <div className="text-sm">Điện thoại</div>
-              <div className="font-semibold">0582 419 433</div>
+              <div className="font-semibold">{contactInformation?.site_phone_number}</div>
             </div>
           </div>
           <div className="flex items-center mt-3 lg:mt-0 lg:ml-16">
@@ -44,7 +36,7 @@ const Footer = ({ contactInformation, color }: FooterProps) => {
             </div>
             <div>
               <div className="text-sm">Địa chỉ</div>
-              <div className="font-semibold">28 Tô Hiệu, Phường Lộc Sơn, TP Bảo Lộc, Tỉnh Lâm Đồng</div>
+              <div className="font-semibold">{contactInformation?.site_address}</div>
             </div>
           </div>
           <SocialItems

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useMemo } from "react";
 import { HTMLHeadType } from "../../types/commonTypes";
 
 interface CustomHeadProps {
@@ -7,11 +6,9 @@ interface CustomHeadProps {
 }
 
 const CustomHead = ({ head }: CustomHeadProps) => {
-  const websiteName = useMemo(() => process.env.NEXT_PUBLIC_WEBSITE_NAME, []);
-
   return (
     <Head>
-      <title>{`${head.title} - ${websiteName}`}</title>
+      <title>{`${head.title} - ${head.siteName}`}</title>
     </Head>
   );
 };

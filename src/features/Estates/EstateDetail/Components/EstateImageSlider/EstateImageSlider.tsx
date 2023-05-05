@@ -1,4 +1,5 @@
 /* eslint-disable import/no-unresolved */
+import { ICloudflareImageResponse, getImageURL } from "@encacap-group/types/dist/re";
 import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -9,7 +10,14 @@ import EstateImageSliderNextButton from "./EstateImageSliderNextButton";
 import EstateImageSliderPrevButton from "./EstateImageSliderPrevButton";
 import EstateImageSliderVideo from "./EstateImageSliderVideo";
 
-const EstateImageSlider = () => {
+interface EstateImageSliderProps {
+  avatar: ICloudflareImageResponse;
+  images: ICloudflareImageResponse[];
+  youtubeId?: string;
+  alt: string;
+}
+
+const EstateImageSlider = ({ avatar, images, youtubeId, alt }: EstateImageSliderProps) => {
   const pagination: PaginationOptions = {
     type: "fraction",
     horizontalClass:
@@ -30,19 +38,20 @@ const EstateImageSlider = () => {
         modules={[Pagination, Navigation]}
         className="relative w-full mb-8 bg-gray-100 md:rounded-lg real-estate-detail-slider aspect-video"
       >
-        <SwiperSlide>
-          <EstateImageSliderVideo
-            videoId="VG0zeok0tr8"
-            thumbnailSrc="https://res.cloudinary.com/baolocre-estatesone/image/upload/q_auto,f_auto/v1648441637/baolocre_estate/h4ryl3h8nvvtuwc009mj.jpg"
-            priority
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <EstateImageSliderImage
-            src="https://res.cloudinary.com/baolocre-estatesone/image/upload/q_auto,f_auto/v1648441637/baolocre_estate/h4ryl3h8nvvtuwc009mj.jpg"
-            alt="Real Estate"
-          />
-        </SwiperSlide>
+        {youtubeId ? (
+          <SwiperSlide>
+            <EstateImageSliderVideo videoId={youtubeId} thumbnailSrc={getImageURL(avatar)} priority />
+          </SwiperSlide>
+        ) : (
+          <SwiperSlide>
+            <EstateImageSliderImage image={avatar} alt={`Ảnh đại diện cho bài viết ${alt}`} />
+          </SwiperSlide>
+        )}
+        {images.map((image) => (
+          <SwiperSlide key={image.id}>
+            <EstateImageSliderImage image={image} alt={`Ảnh cho bài viết ${alt}`} />
+          </SwiperSlide>
+        ))}
       </Swiper>
       <EstateImageSliderNextButton />
     </div>

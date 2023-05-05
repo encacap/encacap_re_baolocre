@@ -1,4 +1,4 @@
-import { houseModalCategories } from "../../const/data";
+import { houseModalCategories } from "../../constants/data";
 import HouseModalListPage from "../../features/HouseModal/HouseModalList/HouseModalListPage";
 import { NewsListPageProps } from "../../types/pageProps";
 
