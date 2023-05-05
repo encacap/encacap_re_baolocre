@@ -9,7 +9,7 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix ."
   },
   "dependencies": {
-    "@encacap-group/types": "^1.6.5",
+    "@encacap-group/types": "^1.6.7",
     "@reduxjs/toolkit": "^1.8.2",
     "@types/react-redux": "^7.1.24",
     "axios": "^0.27.2",

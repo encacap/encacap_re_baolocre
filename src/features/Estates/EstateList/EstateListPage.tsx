@@ -26,7 +26,9 @@ const EstateListPage = ({ head, categories, estates, estateMeta }: EstateListPag
           <div className="py-2 text-2xl font-semibold">Danh sách bất động sản bán</div>
           <div className="mb-6 md:mb-8">Hiện có {estateMeta.totalRows} bất động sản</div>
           <EstateList estates={estates} />
-          <Pagination className="pt-6 mt-4 mb-6 border-t-2 border-gray-100 md:pt-4 md:justify-end md:mt-0 md:mb-0 md:border-t-0" />
+          {estateMeta.totalPages > 1 && (
+            <Pagination className="pt-6 mt-4 mb-6 border-t-2 border-gray-100 md:pt-4 md:justify-end md:mt-0 md:mb-0 md:border-t-0" />
+          )}
         </ContentWrapperBody>
         <ContentWrapperAside>
           <EstateSearch />

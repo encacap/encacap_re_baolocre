@@ -1,14 +1,20 @@
+import { DEFAULT_CLOUDFLARE_VARIANT_ENUM, IContact, getImageURL } from "@encacap-group/types/dist/re";
 import Image from "next/image";
 import { HTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 import PhoneRingIcon from "../../../../common/Icons/PhoneRingIcon";
 import ZaloTextIcon from "../../../../common/Icons/ZaloTextIcon";
+import { beautyPhoneNumber } from "../../../../utils/helpers";
 
-const ContactInformation = ({ className }: HTMLAttributes<HTMLElement>) => {
+interface ContactInformationProps extends HTMLAttributes<HTMLElement> {
+  data: IContact;
+}
+
+const ContactInformation = ({ data, className }: ContactInformationProps) => {
   return (
     <div
       className={twMerge(
-        "flex flex-col items-center p-6 border-2 border-b-2 border-gray-100 rounded-lg lg:shadow-md lg:shadow-gray-100",
+        "flex flex-col items-center p-8 border-2 border-b-2 border-gray-100 rounded-lg lg:shadow-md lg:shadow-gray-100",
         className
       )}
     >
@@ -16,28 +22,33 @@ const ContactInformation = ({ className }: HTMLAttributes<HTMLElement>) => {
         <Image
           width={96}
           height={96}
-          src="https://res.cloudinary.com/baolocre-estatesone/image/upload/c_thumb,g_center,w_300/v1648445896/baolocre_estate/pv6wide7sq11dtl82zk4.jpg"
-          alt="<%= contact.name %>"
+          src={getImageURL(data.avatar, DEFAULT_CLOUDFLARE_VARIANT_ENUM.THUMBNAIL)}
+          alt={data.name}
           className="object-cover object-center w-full h-full"
           loading="lazy"
           decoding="async"
         />
       </div>
-      <div className="mt-5 font-semibold">Nguyễn Khắc Khánh</div>
+      <div className="mt-5 font-semibold">{data.name}</div>
       <div className="flex flex-col items-center justify-center mt-6">
-        <a
-          href="tel:<%= contact.phone %>"
-          className="flex items-center justify-center px-3 py-2 font-semibold duration-200 bg-white border-2 rounded-lg border-encacap-main text-encacap-main hover:bg-encacap-main hover:border-encacap-main hover:text-white"
-        >
-          <PhoneRingIcon className="w-5 mr-2" />
-          0582 419 433
-        </a>
-        <a
-          href="https://www.zalo.me/<%= contact.phone %>"
-          className="flex items-center justify-center px-4 py-3 mt-5 ml-4 font-semibold duration-200 bg-white border-2 rounded-lg border-encacap-zalo text-encacap-zalo hover:bg-encacap-zalo hover:text-white"
-        >
-          <ZaloTextIcon className="w-8" />
-        </a>
+        {data.phone && (
+          <a
+            href="tel:<%= contact.phone %>"
+            className="flex items-center justify-center px-3 py-2 font-semibold duration-200 bg-white border-2 rounded-lg border-encacap-main text-encacap-main hover:bg-encacap-main hover:border-encacap-main hover:text-white"
+          >
+            <PhoneRingIcon className="w-5 mr-2" />
+            {beautyPhoneNumber(data.phone)}
+          </a>
+        )}
+        {data.zalo && (
+          <a
+            href={`https://zalo.me/${data.zalo}`}
+            className="flex items-center justify-center px-3 py-2 mt-5 font-semibold duration-200 bg-white border-2 rounded-lg border-encacap-zalo text-encacap-zalo hover:bg-encacap-zalo hover:text-white"
+          >
+            <ZaloTextIcon className="w-8 mr-2" />
+            {beautyPhoneNumber(data.zalo)}
+          </a>
+        )}
       </div>
     </div>
   );

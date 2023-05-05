@@ -14,13 +14,24 @@ import SameDistrictEstates from "./Components/SameDistrictEstates";
 import SocialShareButtons from "./Components/SocialShareButtons/SocialShareButtons";
 import SuggestionEstates from "./Components/SuggestionEstates";
 
-const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
+const EstateDetailPage = ({
+  head,
+  categories,
+  estate,
+  randomEstates,
+  relativeEstates,
+}: EstateDetailPageProps) => {
   return (
     <PageLayout head={head} footerColor="dark">
       <ContentWrapper>
         <ContentWrapperBody>
           <EstateContentHeader categories={categories} />
-          <EstateImageSlider />
+          <EstateImageSlider
+            avatar={estate.avatar}
+            images={estate.images}
+            youtubeId={estate.youtubeId}
+            alt={estate.title}
+          />
           <Breadcrumb
             items={[
               {
@@ -28,43 +39,44 @@ const EstateDetailPage = ({ head, categories }: EstateDetailPageProps) => {
                 link: "bat-dong-san-ban",
               },
               {
-                text: "Tất cả",
-                link: "tat-ca",
+                text: estate.category.name,
+                link: estate.category.code,
               },
               {
-                text: "Quảng Ngãi",
-                link: "quang-ngai",
+                text: estate.province.name,
+                link: estate.province.code,
               },
               {
-                text: "Tư Nghĩa",
-                link: "tu-nghia",
+                text: estate.district.name,
+                link: estate.district.code,
               },
               {
-                text: "La Hà",
-                link: "la-ha",
+                text: estate.ward.name,
+                link: estate.ward.code,
               },
             ]}
           />
-          <div className="pt-4 pb-3.5 text-2xl font-semibold text-encacap-main">
-            ĐẤT NỀN TP BẢO LỘC. HẺM TRẦN KẾ XƯƠNG
+          <div className="pt-4 pb-3.5 text-2xl font-semibold text-encacap-main">{estate.title}</div>
+          <div className="flex font-semibold md:items-start">
+            <LocationIcon className="flex-shrink-0 w-5 h-5 mt-1 mr-4 md:mt-0.5" />
+            {estate.address}, {estate.ward.name}, {estate.district.name}, {estate.province.name}
           </div>
-          <div className="flex font-semibold md:items-center">
-            <LocationIcon className="flex-shrink-0 w-5 h-5 mt-1 mr-4 md:mt-0" />
-            Đường Blaosire, Phường 2, Thành phố Bảo Lộc, Lâm Đồng
-          </div>
-          <EstateProperties />
-          <ContactInformation className="pb-10 border-t-0 border-b-2 border-l-0 border-r-0 rounded-none md:hidden" />
+          <EstateProperties estate={estate} />
+          <ContactInformation
+            className="pb-10 border-t-0 border-b-2 border-l-0 border-r-0 rounded-none md:hidden"
+            data={estate.contact}
+          />
           <div className="my-6">
-            <EstateDescription />
+            <EstateDescription data={estate.description} />
             <SocialShareButtons />
           </div>
-          <SameDistrictEstates />
-          <SuggestionEstates />
+          <SameDistrictEstates data={relativeEstates} estate={estate} />
+          <SuggestionEstates data={randomEstates} />
           <RandomNewsList />
         </ContentWrapperBody>
         <ContentWrapperAside>
           <EstateSearch />
-          <ContactInformation className="mt-5" />
+          <ContactInformation data={estate.contact} className="mt-5" />
           <FilterByRegion />
         </ContentWrapperAside>
       </ContentWrapper>

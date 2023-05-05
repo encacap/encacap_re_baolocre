@@ -19,7 +19,10 @@ export interface EstateListPageProps {
 
 export interface EstateDetailPageProps {
   head: HTMLHeadType;
-  categories: CategoryType[];
+  categories: ICategory[];
+  estate: IEstate;
+  randomEstates: IEstate[];
+  relativeEstates: IEstate[];
 }
 
 export interface NewsListPageProps {

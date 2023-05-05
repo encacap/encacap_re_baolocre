@@ -1136,10 +1136,10 @@
   dependencies:
     "@cspotcode/source-map-consumer" "0.8.0"
 
-"@encacap-group/types@^1.6.5":
-  version "1.6.5"
-  resolved "https://registry.yarnpkg.com/@encacap-group/types/-/types-1.6.5.tgz#80874f62cf0ae550d45055fb394861eeeb38b202"
-  integrity sha512-KrzH89jfeVHzycWsoc8ra/701oDgsVsFnnFACWZaQCXVH7m5ayT3vx3Tn4jMWcqBfQhoWjOuDVIvLnaSpyCUPQ==
+"@encacap-group/types@^1.6.7":
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/@encacap-group/types/-/types-1.6.7.tgz#c8ca89e7ac7c09094a3f22685563d275fbf38811"
+  integrity sha512-HoNmf+JZ8/3/boxWrLMlZzq6cLWvwwyYk1nBX9NxhmdenOyWv/lhcLP6wiautjuG9Gyvg8nlKwbGAzv5VljcZg==
   dependencies:
     axios "^1.4.0"
     react-hook-form "^7.43.9"
